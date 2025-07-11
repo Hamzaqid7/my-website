@@ -2727,7 +2727,7 @@ input:checked + .slider .icon {
   width: auto;
   height: fit-content;
   top: 4rem;
-  left: 60px;
+  left: 80px;
   z-index: 999999;
   cursor: pointer;
 }
