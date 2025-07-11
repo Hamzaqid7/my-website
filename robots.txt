@@ -1,0 +1,14 @@
+# Allow all search engines
+User-agent: *
+
+# Disallow crawling of backend or sensitive folders (if any exist)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow everything else
+Allow: /
+
+# Link to your sitemap
+Sitemap: http://mylaptopstore.onlinewebshop.net/sitemap.xml

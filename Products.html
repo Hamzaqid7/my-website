@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>H & M Computers</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #hoverText {
+    color: #fff;
+    transition: opacity 0.4s ease;
+    background: linear-gradient(90deg, #000000b6, #8b8585b6);
+  }
+.banner-card {
+  cursor: pointer;
+  }
+.p4product {
+  margin-top: 1rem;
+  color: #000;
+  letter-spacing: normal;
+}
+.product-card:hover p {
+  border-top: 1px solid #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
+}
+.pricetag {
+  margin-top: 1rem;
+  text-decoration: underline;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+.whatsapp-float img {
+  width: 150px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+.disabler {
+  background-color: gray;
+  color: #fff;
+}
+/* For Desktop Screen only */
+@media (min-width: 1281px){
+/* Landing Image */
+.landing {
+  width: auto;
+  height: 650px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.landing img {
+  width: 100%;
+  height: 650px;
+  filter: blur(2px);
+}
+/* Banner Cards */
+.banners {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #1d8be59f;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.banner-card {
+  width: 30%;
+  min-width: 250px;
+  background: #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.banner-card:hover {
+  transform: scale(1.05);
+}
+.banner-card img {
+  width: 100%;
+  height: auto;
+}
+.banner-card h3 {
+  padding: 1rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.product-card p.p4product {
+  margin-top: 1.2rem;
+  color: #000;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.container4P {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0px;
+  margin: 2rem auto;
+  width: 100%;
+  height: fit-content;
+}
+/* Category Sorting CSS */
+.category-sortingP {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 500px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  border: 1px solid #000;
+  height: 70px;
+  margin-right: 14rem;
+}
+.category-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.category-sortingP select {
+  padding: 5px 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.category-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.category-sortingP option {
+  font-weight: 600;
+}
+/* Price Sorting CSS */
+.price-sortingP {
+  margin-left: 14rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 500px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  height: 70px;
+}
+.price-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.price-sortingP select {
+  padding: 5px 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.price-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.price-sortingP option {
+  font-weight: 600;
+}
+.Main-infoC4P {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  height: 650px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  display: flex;
+}
+.Main-infoC4P h1 {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC4P p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2rem;
+  width: 80%;
+  letter-spacing: 1.5px;
+}
+.Main-infoC4P .HP {
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #007bff;
+  font-size: 3rem;
+  background-color: #fff;
+  border-radius: 30px;
+  width: fit-content;
+  margin-top: 4rem;
+}
+.infoPL {
+  margin-left: 8rem;
+  text-align: left;
+}
+.infoPL h2 {
+  font-size: 4rem;
+  text-decoration: underline;
+  color: #007bff;
+  letter-spacing: 2.5px;
+}
+.btn4refresh {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #007bff;
+  text-align: center;
+  border-radius: 30px;
+}
+.btn4refresh:hover {
+  cursor: pointer;
+}
+}
+/* For Smaller Screen */
+@media (min-width: 220px) and (max-width: 374px) {
+  /* Landing Image */
+.landing {
+  display: flex;
+  width: auto;
+  height: 650px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.landing img {
+  width: 100%;
+  height: 650px;
+  filter: blur(2px);
+}
+.Main-infoC4P {
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoC4P h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC4P p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  letter-spacing: 1.5px;
+}
+.Main-infoC4P .HP {
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #007bff;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border-radius: 30px;
+}
+/* Banner Cards */
+.banners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #fff;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.banner-card {
+  width: auto;
+  background: #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.banner-card:hover {
+  transform: scale(1.05);
+}
+.banner-card img {
+  width: 100%;
+  height: auto;
+}
+.banner-card h3 {
+  padding: 1rem;
+}
+.container4P {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: auto;
+  margin: 2rem 0;
+  width: auto;
+  height: fit-content;
+}
+.product-card p.p4product {
+  margin-top: 1rem;
+  color: #000;
+  font-size: 0.8rem;
+  letter-spacing: normal;
+}
+/* Category Sorting CSS */
+.category-sortingP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: auto;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  border: 1px solid #000;
+}
+.category-sortingP label {
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+.category-sortingP select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.category-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.category-sortingP option {
+  font-weight: 500;
+}
+/* Price Sorting CSS */
+.price-sortingP {
+  border: 1px solid #000;
+  background-color: white;
+  padding: 5px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: auto;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+}
+.price-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+.price-sortingP select {
+  margin-left: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.price-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.price-sortingP option {
+  font-weight: 500;
+}
+.infoPL {
+  margin-left: 2rem;
+  text-align: left;
+}
+.infoPL h2 {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  color: #007bff;
+  letter-spacing: 2.5px;
+}
+.btn4refresh {
+  padding: 5px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #007bff;
+  text-align: center;
+  border-radius: 30px;
+  margin-left: 4rem;
+}
+.btn4refresh:hover {
+  cursor: pointer;
+}
+}
+/* For Larger Screens */
+@media (min-width: 375px) and (max-width: 767px) {
+  /* Landing Image */
+.landing {
+  display: flex;
+  width: auto;
+  height: 650px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.landing img {
+  width: 100%;
+  height: 650px;
+  filter: blur(2px);
+}
+.Main-infoC4P {
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoC4P h1 {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+  width: 80%;
+}
+.Main-infoC4P p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 90%;
+  letter-spacing: 1.5px;
+}
+.Main-infoC4P .HP {
+  margin-top: 2rem;
+  width: fit-content;
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #007bff;
+  font-size: 2.2rem;
+  background-color: #fff;
+  border-radius: 30px;
+}
+/* Banner Cards */
+.banners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  background-color: #fff;
+  gap: 1rem;
+}
+.banner-card {
+  width: auto;
+  background: #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.banner-card:hover {
+  transform: scale(1.05);
+}
+.banner-card img {
+  width: 100%;
+  height: auto;
+}
+.banner-card h3 {
+  padding: 1rem;
+}
+.container4P {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: auto;
+  margin: 2rem auto;
+  width: auto;
+  height: fit-content;
+}
+.product-card p.p4product {
+  margin-top: 1rem;
+  color: #000;
+  font-size: 0.8rem;
+  letter-spacing: normal;
+}
+/* Category Sorting CSS */
+.category-sortingP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: auto;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  border: 1px solid #000;
+}
+.category-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.category-sortingP select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.category-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.category-sortingP option {
+  font-weight: 500;
+}
+/* Price Sorting CSS */
+.price-sortingP {
+  display: flex;
+  border: 1px solid #000;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: auto;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+}
+.price-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.price-sortingP select {
+  display: flex;
+  height: 1.5rem;
+  margin-left: 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.price-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.price-sortingP option {
+  font-weight: 500;
+}
+.infoPL {
+  margin-left: 2rem;
+  text-align: left;
+}
+.infoPL h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+  color: #007bff;
+  letter-spacing: 2.5px;
+}
+.btn4refresh {
+  padding: 5px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #007bff;
+  text-align: center;
+  border-radius: 30px;
+}
+.btn4refresh:hover {
+  cursor: pointer;
+}
+}
+/* For Tablet Screen only */
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* Landing Image */
+.landing {
+  display: flex;
+  width: auto;
+  height: 650px;
+  margin-top: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.landing img {
+  width: 100%;
+  height: 650px;
+  filter: blur(2px);
+}
+.Main-infoC4P {
+  position: absolute;
+  top: 6rem;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoC4P h1 {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC4P p {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 60%;
+  letter-spacing: 1.5px;
+}
+.Main-infoC4P .HP {
+  text-align: center;
+  letter-spacing: 2.5px;
+  color: #007bff;
+  font-size: 2.5rem;
+  background-color: #fff;
+  border-radius: 30px;
+}
+/* Banner Cards */
+.banners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #fff;
+  gap: 0.5rem;
+}
+.banner-card {
+  width: 100%;
+  min-width: 250px;
+  background: #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.banner-card:hover {
+  transform: scale(1.05);
+}
+.banner-card img {
+  width: 100%;
+  height: auto;
+}
+.banner-card h3 {
+  padding: 1rem;
+}
+.container4P {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: auto;
+  margin: 2rem auto;
+  width: 100%;
+  height: fit-content;
+}
+.pricetag {
+  font-size: 1.4rem;
+}
+.p4product {
+  margin-top: 1rem;
+  letter-spacing: normal;
+}
+.p4product:hover {
+  border-top: 1px solid #000;
+}
+/* Category Sorting CSS */
+.category-sortingP {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  padding: 2px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 350px;
+  height: 60px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 4rem;
+}
+.category-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+}
+.category-sortingP select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.category-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.category-sortingP option {
+  font-weight: 600;
+}
+/* Price Sorting CSS */
+.price-sortingP {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #000;
+  background-color: white;
+  padding: 2px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 350px;
+  height: 60px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+  margin-left: 4rem;
+}
+.price-sortingP label {
+  font-weight: bold;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: normal;
+  margin-top: 0;
+}
+.price-sortingP select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: 1.3rem;
+}
+.price-sortingP select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.price-sortingP option {
+  font-weight: 600;
+}
+.infoPL {
+  margin-left: 4rem;
+  text-align: left;
+}
+.infoPL h2 {
+  font-size: 3.5rem;
+  text-decoration: underline;
+  color: #007bff;
+  letter-spacing: 2.5px;
+}
+.btn4refresh {
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #007bff;
+  text-align: center;
+  border-radius: 30px;
+  height: fit-content;
+  margin-top: 1rem;
+}
+.btn4refresh:hover {
+  cursor: pointer;
+}
+}
+  </style>
+</head>
+<body>
+  <!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+  <header class="navbar">
+    <img src="Images/favicon.ico" class="logo">
+    <h1 class="Hero-heading"><a style="color: #fff;" href="index.html">H & M Computers</a></h1>
+    <button id="add2CartBtn" class="hideondesk">🛒</button>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle" onclick="myFunctionH(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="nav-container" id="draggableNav">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="About-Us.html">About Us</a>
+      <a href="Checkout.html">Checkout</a>
+      <a href="Contacts.html">Contact</a>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About Us</a></li>
+      <li><a class="nav-link" href="Checkout.html">Checkout</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+      <button id="add2CartBtn2" class="hideontab">🛒</button>
+    </nav>
+  </header>
+  <!-- Theme Mode Toggle Btn -->
+  <label class="theme-switch" title="Change body theme">
+  <input type="checkbox" id="toggleTheme">
+  <span class="slider">
+    <span class="icon" id="modeIcon">🌞</span>
+  </span>
+  </label>
+<div style="padding-top: 4rem;" class="content">
+  <!-- User Account Icon -->
+  <div class="user-account" id="user-panel">
+    <img id="img4user" src="Images/User-icon.png" width="auto" height="auto" alt="user-account icon" loading="lazy">
+  </div>
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>Hamza Aijaz</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span> Apki Details</li>
+      <li><span class="icon">❤️</span> Favourites</li>
+      <li><span class="icon">📍</span> Addresses</li>
+      <li><span class="icon">🔔</span> Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+  <div class="Main-infoC4P" id="hoverText">
+    <h1 class="dm-serif-text-regular">You Name It We Have It</h1>
+    <p class="dm-serif-text-regular-italic">Search Your Favourite product among top brands and companies with original condition and excellent performance!</p>
+    <p class="dm-serif-text-regular-italic HP">Have A Happy Shopping !</p>
+  </div>
+  <!-- Landing Image -->
+  <section class="landing">
+    <img src="Images/Landing4P.png" width="auto" height="auto" alt="Landing Banner" loading="lazy">
+  </section>
+
+  <!-- Banner Cards -->
+  <section class="banners">
+    <div class="banner-card">
+      <a class="category-tab" data-category="computers" data-target="computers" value="computers">
+      <img src="Images/Banner4P-PC.webp" alt="Banner 1" />
+      <h3>Computer Systems</h3>
+      </a>
+    </div>
+    <div class="banner-card">
+      <a class="category-tab active" data-category="laptops" data-target="laptops" value="laptops">
+      <img src="Images/Banner4P-L.webp" alt="Banner 2" />
+      <h3>Laptops</h3>
+      </a>
+    </div>
+    <div class="banner-card">
+      <a class="category-tab" data-category="speakers" data-target="speakers" value="speakers">
+      <img src="Images/Banner4P-S.webp" alt="Banner 3" />
+      <h3>Speakers</h3>
+      </a>
+    </div>
+    <div class="banner-card">
+      <a class="category-tab" data-category="printers" data-target="printers" value="printers">
+      <img src="Images/Banner4P-P.webp" alt="Banner 1" />
+      <h3>Printers</h3>
+      </a>
+    </div>
+    <div class="banner-card">
+      <a class="category-tab" data-category="monitors" data-target="monitors" value="monitors">
+      <img src="Images/Banner4P-M.webp" alt="Banner 2" />
+      <h3>Monitors</h3>
+      </a>
+    </div>
+    <div class="banner-card">
+      <a class="category-tab" data-category="peripherals" data-target="peripherals" value="peripherals">
+      <img src="Images/Banner4P-PP.webp" alt="Banner 3" />
+      <h3>PC Peripherals</h3>
+      </a>
+    </div>
+  </section>
+  
+  <div class="container4P"> 
+    <div class="price-sortingP">
+      <label for="sortPriceP">Sort by Price:</label>
+      <select id="sortPriceP">
+        <option value="default" disabled selected>By Default</option>
+        <option value="lowToHigh">Low to High</option>
+        <option value="highToLow">High to Low</option>
+      </select>
+      <button class="btn4refresh" onclick="refreshActiveCategory()">Refresh</button>
+    </div>
+    <!-- Category wise sorting -->
+    <div class="category-sortingP">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="sortcategoryP">
+      </select>
+    </div>
+    <!-- For Laptops Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-laptops">
+        <option value="all">All Categories</option>
+        <option value="gaminglaptops">Gaming Laptops</option>
+        <option value="businesslaptops">Business Laptops</option>
+        <option value="newarrivals">New Arrivals</option>
+        <option value="1monthwarranty">Workstation Laptops</option>
+        <option value="clearancesale">40% Off Sale Laptops</option>
+      </select>
+    </div>
+    <!-- For Computers Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-computers">
+        <option value="all">All Categories</option>
+        <option value="gamingcomputers">Gaming Computers</option>
+        <option value="lowend">Low-End Computers</option>
+        <option value="highend">High-End Computers</option>
+        <option value="workstation">Workstation Computers</option>
+        <option value="clearancesale">40% Off Sale Computers</option>
+      </select>
+    </div>
+    <!-- For Monitors Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-monitors">
+        <option value="all">All Categories</option>
+        <option value="gamingmonitors">Gaming Monitors</option>
+        <option value="businessmonitors">Business Monitors</option>
+        <option value="newarrivals">New Arrivals</option>
+        <option value="1monthwarranty">Curved Monitors</option>
+        <option value="clearancesale">8k Videos Supported Monitors</option>
+      </select>
+    </div>
+    <!-- For Printers Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-printers">
+        <option value="all">All Categories</option>
+        <option value="photocopier">Photocopier Machines</option>
+        <option value="printer">Office Printers</option>
+        <option value="newarrivals">New Arrivals</option>
+        <option value="officejet">Office-jet B&W Printers</option>
+        <option value="colorinkjet">Color Inkjet Printers</option>
+        <option value="colorlaserjet">Color Laserjet Printers</option>
+      </select>
+    </div>
+    <!-- For Speakers Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-speakers">
+        <option value="all">All Categories</option>
+        <option value="woofers">Woofer Systems</option>
+        <option value="stereo">Stereo Speakers</option>
+        <option value="newarrivals">New Arrivals</option>
+        <option value="bluetooth">Bluetooth Speakers</option>
+      </select>
+    </div>
+    <!-- For PC-Peripherals Category -->
+    <div class="category-sortingP" style="display: none;">
+      <label for="sortcategoryP">Sort by Category:</label>
+      <select id="filter-peripherals">
+        <option value="all">All Categories</option>
+        <option value="usbdrives">USB Drives</option>
+        <option value="ssd">SSD Drives</option>
+        <option value="mouse">Mouse</option>
+        <option value="keyboard">Keyboard</option>
+        <option value="ddr3pcram">DDR3 PC RAM</option>
+        <option value="converters">Converters</option>
+        <option value="ddr3laptopram">DDR3 Laptop RAM</option>
+        <option value="ddr4pcram">DDR4 PC RAM</option>
+        <option value="ddr4laptopram">DDR4 Laptops RAM</option>
+        <option value="displaycables">Display Cables</option>
+        <option value="powercords">Power Cords</option>
+        <option value="keyboard&mouse">Keyboard & Mouse</option>
+      </select>
+    </div>
+  </div>
+  <!-- Search Bar Section -->
+    <div class="search-container">
+      <input type="text" id="productSearch" placeholder="Search products..." />
+    </div>
+  <div class="infoPL">
+    <h2 id="category-heading">Laptops :</h2>
+  </div>
+<section class="products4P">
+    <section class="products product-menu" id="laptops">
+    <!-- For Laptops catalogue -->
+        <div class="product-card" data-price="43000" data-category="businesslaptops" data-name="Dell Latitude 5400 i5-8thgen 8/128gb SSD" data-color="Black" data-image="Images/Dell 5400 laptop.png">
+        <img src="Images/Dell 5400 laptop.png" alt="Laptop 1">
+        <h3>Dell Latitude 5400 i5-8th gen 8/128gb SSD with 14" screen size</h3>
+        <p class="p4des">lightweight laptop | Best For Studenst & Freelancers | Refurbished Laptop</p>
+        <p class="pricetag">Rs 43,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="55000" data-category="gaminglaptops" data-name="Dell Precision 7730 i5-8thgen 8/256gb SSD" data-color="Black" data-image="Images/D-7730.webp">
+        <img src="Images/D-7730.webp" alt="Laptop 2">
+        <h3>Dell Precision 7730 i5-8th gen 8/256gb SSD with 15.5" screen size </h3>
+        <p class="p4des">Gaming PC with 4gb Nvidia Graphics Card | Refurbished Laptop | Best For Professionals</p>
+        <p class="pricetag">Rs 55,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="22500" data-category="lowendlaptops" data-name="Lenovo T430 i5-3rdgen 8/128gb SSD" data-color="Black" data-image="Images/L-t430.png">
+        <img src="Images/L-t430.png" alt="Laptop 3">
+        <h3>Lenovo T430 i5-3rd gen 8/128gb SSD with 14" screen size | Dual HDDs</h3>
+        <p class="p4des">With Dual Battery | Best For Student | U-Series Processor installed | Refurbished Laptop</p>
+        <p class="pricetag">Rs 22,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="115000" data-category="gaminglaptops" data-name="Hp 840 g7 i5-10thgen 8/256gb SSD" data-color="Silver" data-image="Images/HP-840g7.png">
+        <img src="Images/HP-840g7.png" alt="Laptop 4">
+        <h3>Hp 840 g7 with i5-10th gen 8/256gb memory and 14.4" Touchscreen | Refurbished</h3>
+        <p class="p4des">2gb graphics card | Best For Teachers | Available in Silver color | Best For Professionals</p>
+        <p class="pricetag">Rs 115,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="36000" data-category="businesslaptops" data-name="Lenovo T470 i5-7thgen 8/256gb SSD" data-color="Black" data-image="Images/Lenovo T470.png">
+        <img src="Images/Lenovo T470.png" alt="Laptop 5">
+        <h3>Lenovo T470 i5-7th gen 8/256gb SSD with 14" touchscreen screen size</h3>
+        <p class="p4des">Ligtweight & Top Selling Model | Dual Battery installed | Refurbished Good Condition</p>
+        <p class="pricetag">Rs 36,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="105000" data-category="businesslaptops" data-name="Dell Precision 3541 i5-9thgen 8/256gb SSD" data-color="Navy Blue" data-image="Images/Dell Precision 3541.png">
+        <img src="Images/Dell Precision 3541.png" alt="Laptop 6">
+        <h3>Dell Precision 3541 with i5-9th gen 8/256gb memory and 14.4" IPS Touchscreen</h3>
+        <p class="p4des">Backlit Keyboard | 120Hz Refresh rate | Refurbished Condition</p>
+        <p class="pricetag">Rs 105,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="43000" data-category="gaminglaptops" data-name="Lenovo T480 i5-8thgen 8/256gb SSD" data-color="Black" data-image="Images/Lenovo T480.png">
+        <img src="Images/Lenovo T480.png" alt="Laptop 7">
+        <h3>Lenovo T480 i5-8th gen 8/256gb SSD with 14" touchscreen screen </h3>
+        <p class="p4des">4gb graphics card | Best for Gamers | 1080P Screen Resolution</p>
+        <p class="pricetag">Rs 43,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="65000" data-category="businesslaptops" data-name="Dell Precision 3510 i5-10thgen 8/256gb SSD" data-color="Black" data-image="Images/Dell 3510.png">
+        <img src="Images/Dell 3510.png" alt="Laptop 8">
+        <h3>Dell Precision 3510 i5-10th gen 8/256gb SSD with 14.4" IPS Display</h3>
+        <p class="p4des">Type-C charging port | Multi-threading supported | Refurbished Condition</p>
+        <p class="pricetag">Rs 65,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+    
+    <section class="products product-menu" id="printers" style="display: none;">
+    <!-- For Printers catalogue -->
+      <div class="product-card" data-price="173000" data-category="photocopier" data-name="Xerox WC-7535" data-color="white" data-image="Images/Xerox printer.png">
+        <img src="Images/Xerox printer.png" alt="printer 1">
+        <h3>Xerox-WC-7535 Refurbished Photocopier Machine AC-220v Power Supply</h3>
+        <p class="p4des">1 Month Warranty | Duplex Printing | USB Connectivity | 2s 500 sheets input tray</p>
+        <p class="pricetag">Rs 173,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="90000" data-category="printer" data-name="Ricoh Aficio 301" data-color="white" data-image="Images/Ricoh printer.png">
+        <img src="Images/Ricoh printer.png" alt="printer 2">
+        <h3>Ricoh Aficio 301 Laserjet Printer RC-series - Best Printer For Businesses & Offices</h3>
+        <p class="p4des">Energy saving feature | Wireless Connectivity | 3.0 USB Port | IOT features with USB Compatibility</p>
+        <p class="pricetag">Rs 90,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="42400"  data-category="colorinkjet" data-name="Canon PIXMA G1010" data-color="white" data-image="Images/Canon printer.png">
+        <img src="Images/Canon printer.png" alt="printer 3">
+        <h3>Canon Inkjet PIXMA G1010 Printer - No.1 Color Printer Popular For Its Sleek design</h3>
+        <p class="p4des">300dpi borderless printing enabled | Duplex Printing supported | Wireless Connectivity | 200 sheets input</p>
+        <p class="pricetag">Rs 41,400 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="65000" data-category="officejet" data-name="Hp Office-jet Pro 7720" data-color="black" data-image="Images/Hp printer.png">
+        <img src="Images/Hp printer.png" alt="printer 4">
+        <h3>Hp Office-jet Pro 7720 A3 All-in-one Printer Functions : Print, copy, scan, fax</h3>
+        <p class="p4des">600dpi borderless printing enabled | Wireless & Bluetooth Connectivity | Duplex Printing supported | 250 sheets input</p>
+        <p class="pricetag">Rs 65,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="74000" data-category="colorlaserjet" data-name="Hp C2023LJB1" data-color="black" data-image="Images/Hp Color Laserjet.png">
+        <img src="Images/Hp Color Laserjet.png" alt="printer 5">
+        <h3>Hp Color Laserjet Printer C2023LJB1, Designed for High-Volume Printing At Low-Energy</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 250 sheets input</p>
+        <p class="pricetag">Rs 74,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="62000" data-category="colorinkjet" data-name="Epson EQJ52" data-color="black" data-image="Images/Epson Eco-tank L3250.png">
+        <img src="Images/Epson Eco-tank L3250.png" alt="printer 6">
+        <h3>Epson Color EQJ52 Printer with Eco-friendly and Energy Saving Feature | Office Printer</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 180 sheets input tray</p>
+        <p class="pricetag">Rs 62,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="34000" data-category="colorinkjet" data-name="Canon PIXMA TR-4550" data-color="white" data-image="Images/Canon-TR4550 Color Printer.png"> 
+        <img src="Images/Canon-TR4550 Color Printer.png" alt="printer 7">
+        <h3>Canon PIXMA TR-4550 A4 Color Multi-function Inkjet Printer | lightweight Portable Printer </h3>
+        <p class="p4des">600dpi color & black print resolution | Wireless & Bluetooth Connectivity | 250 sheets input</p>
+        <p class="pricetag">Rs 34,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="68000" data-category="colorinkjet" data-name="Hp Office-jet Pro plus 8600" data-color="white" data-image="Images/HP Officejet Pro 8600.webp">
+        <img src="Images/HP Officejet Pro 8600.webp" alt="printer 8">
+        <h3>Hp Office-jet Pro plus 8600 series-N911 Color Printer with Eco-friendly system installed</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 150 sheets input</p>
+        <p class="pricetag">Rs 68,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+    
+    <section class="products product-menu" id="monitors" style="display: none;">
+    <!-- For Monitors catalogue -->
+      <div class="product-card" data-price="57500" data-name="Hp Series 5 5S24GHQ" data-image="Images/Monitor pic-2.png">
+        <img src="Images/Monitor pic-2.png" alt="Monitor 1">
+        <h3>Hp Series 5 5S24GHQ 24" IPS panel with 75Hz refresh rate - 4k videos supported with 24fps Video Quality</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 57,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="60000" data-name="AOC 27G2N" data-image="Images/Monitor pic-1.webp">
+        <img src="Images/Monitor pic-1.webp" alt="Monitor 2">
+        <h3>AOC 27G2N 27" 180Hz 1080P Gaming Monitor - 8k videos supported with 60 fps Video Quality</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 60,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="47999" data-name="AOC 24G2SP 1080P Gaming Monitor" data-image="Images/Monitor pic-3.png">
+        <img src="Images/Monitor pic-3.png" alt="Monitor 3">
+        <h3>AOC 24G2SP 1080P Gaming Monitor with IPS panel with 165Hz - Enhance your Gaming Experience</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 47,999 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="34900" data-name="Phillips M2722H" data-image="Images/Monitor pic-4.png">
+        <img src="Images/Monitor pic-4.png" alt="Monitor 4">
+        <h3>Phillips M2722H 27inch IPS FHD Monitor - International Branded Monitor with 2k Resolution</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 34,990 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="36000" data-name="ASUS 24 inch LED IPS Monitor" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 5">
+        <h3>ASUS 24" LED IPS Monitor with 120Hz Refresh Rate - 1080p Resolution & 4k Videos supported</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 36,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="30999" data-name="Samsung 24 inch LED IPS Curve Display Monitor" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 6">
+        <h3>Samsung 24" LED IPS Curve Display Monitor - 120Hz Refresh rate & 1080P Screen Resolution </h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 30,999 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="33000" data-name="Dell P22DBJHQ" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 7">
+        <h3>Dell P22DBJHQ 22" screen with IPS LED Display - 4k videos supported with 2 3.0 USB ports</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 33,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="32000" data-name="Hp S32DBHLP" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 8">
+        <h3>Hp S32DBHLP 32" LED Screen with FHD Panel - 120Hz Refresh Rate Supported & 4K Resolution</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 32,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="products product-menu" id="computers" style="display: none;">
+    <!-- For Computers catalogue -->
+      <div class="product-card" data-price="16000" data-category="lowend" data-name="Dell Optiplex 7010" data-image="Images/Computer pc pic-2.jpg">
+        <img src="Images/Computer pc pic-2.jpg" alt="Computer 1">
+        <h3>Dell Optiplex 7010 i5-3rd gen with 8/128gb memory | Tower PC | with Intel UHD Graphics 64mb Vram available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 16,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="35500" data-category="gamingcomputers" data-name="Dell Optiplex 9020" data-image="Images/Computer pc pic-3.jpg">
+        <img src="Images/Computer pc pic-3.jpg" alt="Computer 2">
+        <h3>Dell Optiplex 9020 i5-7th gen with 16/256gb memory Tower PC | AC 220v  | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 35,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="66500" data-category="gamingcomputers" data-name="Lenovo Workstation WZH9Q" data-image="Images/Computer pc pic-4.jpg">
+        <img src="Images/Computer pc pic-4.jpg" alt="Computer 3" >
+        <h3>Lenovo Workstation WZH9Q i5-8th gen 16/256gb memory Tower PC | AC 220v | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 65,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="170000" data-category="highend" data-name="HP Pro Tower 290 G9" data-image="Images/Computer pc pic-1.webp">
+        <img src="Images/Computer pc pic-1.webp" alt="Computer 4">
+        <h3>HP Pro Tower 290 G9 8/512gb memory Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 170,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="6000" data-category="lowend" data-name="Dell Optiplex 5040" data-image="Images/Dell Optiplex 5040.png">
+        <img src="Images/Dell Optiplex 5040.png" alt="Computer 5">
+        <h3>Dell Optiplex 5040 2nd/3rd gen Desktop PC | i5-3H778P with 2 x DDR3 RAM Slots </h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 6,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="9500" data-category="lowend" data-name="Lenovo Thinkcentre M73" data-image="Images/Lenovo Thinkcentre M73.jpg">
+        <img src="Images/Lenovo Thinkcentre M73.jpg" alt="Computer 6">
+        <h3>Lenovo Thinkcentre M73 i5-4thgen | Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 9,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="21000" data-category="lowend" data-name="Dell Optiplex 9020" data-image="Images/Dell Optiplex 9020.webp">
+        <img src="Images/Dell Optiplex 9020.webp" alt="Computer 7">
+        <h3>Dell Optiplex 9020 i5-4th gen | Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 21,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="28500" data-category="highend" data-name="HP HQ99AJ All-in-one PC" data-image="Images/Hp HQ99AJ PC.webp">
+        <img src="Images/Hp HQ99AJ PC.webp" alt="Computer 8">
+        <h3>HP HQ99AJ All-in-one PC | i5-4th gen 16/512gb SSD | Tower PC | AC 220v | VGA, DP, HDMI ports </h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 28,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+      </section>
+
+      <section class="products product-menu" id="speakers" style="display: none;">
+    <!-- For speakers catalogue -->
+      <div class="product-card" data-price="4500" data-category="woofers" data-name="Audionic Home Speaker" data-image="Images/Audionic-speaker1.webp">
+        <img src="Images/Audionic-speaker1.webp" alt="Speaker 1">
+        <h3>Audionic Home Speaker with 2 x mini speakers  | Loud Bass | Stereo Type | Portable PC Speaker</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Bluetooth technology</p>
+        <p class="pricetag">Rs 4,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="12500" data-category="woofers" data-name="Audionic Sound Master" data-image="Images/Audionic-speaker2.webp">
+        <img src="Images/Audionic-speaker2.webp" alt="Speaker 2">
+        <h3>Audionic Sound Master | Powerful Bass | Best For Parties | Stereo Type | Bluetooth Big Speaker</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 12,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="24000" data-category="stereo" data-name="Audionic Mehfil Version" data-image="Images/Audionic-speaker3.png">
+        <img src="Images/Audionic-speaker3.png" alt="Speaker 3" >
+        <h3>Audionic Mehfil Version Speaker For Large Area | Surround System | Echo Adjustable | With Mic</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 24,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="44000" data-category="newarrivals" data-name="Audionic Sound Busters" data-image="Images/Audionic-speaker4.jpg">
+        <img src="Images/Audionic-speaker4.jpg" alt="Speaker 4">
+        <h3>Audionic Sound Busters available with Mic and 2 Standing Side speakers | Cinema Sound Quality</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 44,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="28000" data-category="newarrivals" data-name="Sonarc-P2 Bluetooth Speaker" data-image="Images/sounarc-p2-bluetooth-speaker-best-price-in-pakistan.png">
+        <img src="Images/sounarc-p2-bluetooth-speaker-best-price-in-pakistan.png" alt="Speaker 5">
+        <h3>Sonarc-P2 Bluetooth Speaker | Best For Mobile Phones & Tablets | Built-in Battery with LED</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 28,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="9500" data-category="newarrivals" data-name="JBL Party Speakers" data-image="Images/JBL-partyspeakers.png">
+        <img src="Images/JBL-partyspeakers.png" alt="Speaker 6">
+        <h3>JBL Party Speakers with LED Lights and Flashlight | Handle to Carry Easily | USB & Aux Ports</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 9,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="21000" data-category="bluetooth" data-name="Dell DMS192H" data-image="Images/Speaker-7.jpg">
+        <img src="Images/Speaker-7.jpg" alt="Speaker 7">
+        <h3>Dell DMS192H Mini Portable Speakers | Bluetooth v5.0 | Built-in Battery | Type-C Charging Port</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 | Built-in Speakers</p>
+        <p class="pricetag">Rs 21,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="1250" data-category="bluetooth" data-name="JBL FHQ21S4" data-image="JBL-Minispeaker.png">
+        <img src="Images/JBL-Minispeaker.png" alt="Speaker 8">
+        <h3>JBL FHQ21S4 Mini Speaker | Bluetooth v5.0 | Long Lasting Built-in Battery | Black Color & Built-in Mic</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 1,250 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+      </section>
+
+      <section class="products product-menu" id="peripherals" style="display: none;">
+    <!-- For PC peripherals catalogue -->
+      <div class="product-card" data-price="1500" data-category="keyboard" data-name="Dell Original Wired Keyboard" data-image="Images/Dell Wired Keyboard.webp">
+        <img src="Images/Dell Wired Keyboard.webp" alt="PC Acc. 1">
+        <h3>Dell Original Wired Keyboard | Soft Buttons | Black Color with USB Connector | Sleek Ergonomic Design</h3>
+        <p class="p4des">Suitable For Fast Typing Users | Enhance Your Typing Speed | QWERTY USA-Based Layout Keyboard | Popular Keyboard</p>
+        <p class="pricetag">Rs 1,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="450" data-category="mouse" data-name="A4Tech Official Wired Mouse" data-image="Images/A4Tech Wired Mouse.png">
+        <img src="Images/A4Tech Wired Mouse.png" alt="PC Acc. 2">
+        <h3>A4Tech Official Wired Mouse with USB Connector | Black Color | Ergonomically Designed For Safe Navigation</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported </p>
+        <p class="pricetag">Rs 450 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="400" data-category="mouse" data-name="Dell Optical Wired Mouse" data-image="Images/Dell Optical Mouse.png">
+        <img src="Images/Dell Optical Mouse.png" alt="PC Acc. 3" >
+        <h3>Dell Optical Wired Mouse With USB Connector | Black Color | Ergonomically Designed For Safe Navigation</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported </p>
+        <p class="pricetag">Rs 400 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="2000" data-category="mouse" data-name="A4Tech Official Wireless Mouse" data-image="Images/Banda G620 2.4Ghz Wireless Mouse.png">
+        <img src="Images/Banda G620 2.4Ghz Wireless Mouse.png" alt="PC Acc. 4">
+        <h3>A4Tech Official Wireless Mouse with Mini USB Dongle | Black Color | Ergonomically Designed For Safe Navigation</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported</p>
+        <p class="pricetag">Rs 2,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="300" data-category="displaycables" data-name="China Branded New Male-2-Male VGA Cable" data-image="Images/VGA-cable.png">
+        <img src="Images/VGA-cable.png" alt="PC Acc. 5">
+        <h3>China Branded New Male-2-Male VGA Cable | Supports Projector, PC, TV and Laptops | High-Quality PVC Coating</h3>
+        <p class="p4des">Best China VGA Cable | Multi-purpose VGA Cable | Good Display Result | Reliable Imported Quality VGA Cable</p>
+        <p class="pricetag">Rs 300 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="350" data-category="displaycables" data-name="China Branded Female-2-Male VGA Cable" data-image="Images/VGA-cable2.png">
+        <img src="Images/VGA-cable2.png" alt="PC Acc. 6">
+        <h3>China Branded Female-2-Male VGA Cable | Supports Projector, PC, TV and Laptops | High-Quality PVC Coating</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported </p>
+        <p class="pricetag">Rs 350 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="750" data-category="displaycables" data-name="China 1-meter Male-2-Male HDMI Cable" data-image="Images/HDMI-cable(1meter).png">
+        <img src="Images/HDMI-cable(1meter).png" alt="PC Acc. 7">
+        <h3>China 1-meter Male-2-Male HDMI Cable | Supports Projector, PC, TV and Laptops | High-Quality PVC Coating</h3>
+        <p class="p4des">Cable length upto 1 meter | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 750 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="1200" data-category="displaycables" data-name="China 3-meter Male-2-Male HDMI Cable" data-image="Images/HDMI-cable(3meter).png">
+        <img src="Images/HDMI-cable(3meter).png" alt="PC Acc. 8">
+        <h3>China 3-meter Male-2-Male HDMI Cable | Supports Projector, PC, TV and Laptops | High-Quality PVC Coating</h3>
+        <p class="p4des">Cable length upto 3 meter | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 1,200 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="600" data-category="converters" data-name="Vention Official Typec2HDMI-Cable" data-image="Images/Typec2hdmi-cable.png">
+        <img src="Images/Typec2hdmi-cable.png" alt="PC Acc. 9">
+        <h3>Vention Official Typec2HDMI-Cable | Long 1 meter Cable | Supports All Devices</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 600 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="850" data-category="converters" data-name="BaseUs Official DP-2-VGA Converter/Adaptor" data-image="Images/DP2VGA-converter1.png">
+        <img src="Images/DP2VGA-converter1.png" alt="PC Acc. 10">
+        <h3>BaseUs Official DP-2-VGA Converter/Adaptor | Long Life & Fast Conversion | Good Resolution</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 850 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="1599" data-category="mouse" data-name="1HORA Official HO27Q2PH 2.4Ghz Wireless Mouse" data-image="Images/1HORA-2.4G-Wireless-Mouse-Black.png">
+        <img src="Images/1HORA-2.4G-Wireless-Mouse-Black.png" alt="PC Acc. 11">
+        <h3>1HORA Official HO27Q2PH 2.4Ghz Wireless Mouse | For Fast Navigation | LED light installed</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 1,599 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="2500" data-category="keyboard&mouse" data-name="Apple Wireless keyboard & Mouse" data-image="Images/Apple-Wireless-Keyboard-Mouse-Mini.png">
+        <img src="Images/Apple-Wireless-Keyboard-Mouse-Mini.png" alt="PC Acc. 12">
+        <h3>Apple Wireless keyboard & Mouse | Sleek Design | Silver Color | Portable Keyboard & Mouse</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 2,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="250" data-category="powercords" data-name="Ronin Official 3-Pin Power Cord" data-image="Images/PC Power Cord.webp">
+        <img src="Images/PC Power Cord.webp" alt="PC Acc. 12">
+        <h3>Ronin Official 3-Pin Power Cord | Made in Pakistan | High Quality Copper Wire | Black Color</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 250 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+      </section>
+    </section>
+
+</div>
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span>YOUR CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p id="emptyCartMessage" class="empty-cart-msg">🛒 Your cart is empty!</p>
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">Rs.0</span></p>
+    <div class="cart-buttons">
+      <button id="checker" class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsappicon.png" loading="lazy" alt="WhatsApp Chat">
+</a>
+<!--Scroll to Top Button-->
+<img id="scroll2top" onclick="scrollToTop()" src="Images/up-arrow.png" width="100px" height="100px" loading="lazy">
+
+    <!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - Reliable like a dost</h2>
+      <p>Quality laptops, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="About-Us.html">About Us</a></li>
+        <li><a href="Contacts.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.png" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.png" width="auto" height="auto" loading="lazy"><p>+92 300 1234567</p>
+      
+      <img src="Images/LocationF.png" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+  const nav = document.getElementById('draggableNav');
+  let isDragging = false;
+  let startX, startLeft;
+
+  nav.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startLeft = nav.offsetLeft;
+  });
+
+  nav.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    const deltaX = e.touches[0].clientX - startX;
+    let newLeft = startLeft + deltaX;
+    
+    // Limit movement within the screen
+    const maxLeft = window.innerWidth - nav.offsetWidth;
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+    nav.style.left = newLeft + 'px';
+  });
+
+  nav.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+
+  // Price Sorting Function for laptops
+const categoryNames = {
+  laptops: "Laptops :",
+  printers: "Printers :",
+  monitors: "Monitors :",
+  printers: "Printers :",
+  computers: "Computers :",
+  peripherals: "PC Peripherals",
+  speakers: "Speakers",
+  // add all your categories here
+};
+const categoryTabs = document.querySelectorAll(".category-tab");
+const productMenus = document.querySelectorAll(".product-menu");
+const categoryHeading = document.getElementById('category-heading');
+const sortSelect = document.getElementById('sortPriceP');
+let activeCategory = 'laptops'; // Default category
+
+  // Function to show a specific product menu
+  function showMenu(categoryId) {
+    productMenus.forEach(menu => {
+      menu.style.display = "none";
+    });
+
+const filterSelect = document.getElementById('sortcategoryP'); // Main dropdown
+
+function updateFilterOptions(categoryId) {
+  const categoryFilter = document.getElementById('filter-' + categoryId);
+  if (categoryFilter) {
+    // Clear current options
+    filterSelect.innerHTML = '';
+
+    // Copy all options from the category-specific <select>
+    Array.from(categoryFilter.options).forEach(option => {
+      const newOption = document.createElement('option');
+      newOption.value = option.value;
+      newOption.textContent = option.textContent;
+      filterSelect.appendChild(newOption);
+    });
+  }
+}
+    const targetMenu = document.getElementById(categoryId);
+    if (targetMenu) {
+      targetMenu.style.display = "grid";
+      activeCategory = categoryId; // Update the active category
+
+       // ✅ Update the <h2> heading text based on categoryId
+    categoryHeading.textContent = categoryNames[categoryId] || "Products";
+
+    // 🔥 Update filter dropdown
+    updateFilterOptions(categoryId);
+    }
+  }
+  // Initial setup: Show the first category's menu
+  showMenu(activeCategory);
+
+  // Add click event listeners to category tabs
+  categoryTabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      // Remove 'active' class from all tabs
+      categoryTabs.forEach(t => t.classList.remove("active"));
+
+      // Add 'active' class to the clicked tab
+      this.classList.add("active");
+
+      // Get the category ID from the data attribute
+      const categoryId = this.getAttribute("data-category");
+
+      // Show the corresponding product menu
+      showMenu(categoryId);
+    });
+  });
+
+  // Sort on price change
+  sortSelect.addEventListener('change', () => {
+  const productList = document.getElementById(activeCategory); // now dynamic
+  const products = Array.from(productList.querySelectorAll('.product-card'));
+
+    products.sort((a, b, c) => {
+      const priceA = parseInt(a.dataset.price);
+      const priceB = parseInt(b.dataset.price);
+      return sortSelect.value === 'lowToHigh' ? priceA - priceB : priceB - priceA;
+    });
+
+    productList.innerHTML = '';
+    products.forEach(product => productList.appendChild(product));
+  });
+
+// Sort Category Wise For Laptops
+
+  // Get the filter select element
+const filterSelect = document.getElementById('sortcategoryP');
+
+// Get all product sections by their common class or tag them manually
+const productSections = document.querySelectorAll('.product-menu');
+
+// Add change event listener
+filterSelect.addEventListener('change', function () {
+const selectedCategory = this.value;
+
+  productSections.forEach(section => {
+  const productCards = section.querySelectorAll('.product-card');
+
+    productCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+
+      if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+        card.style.display = 'grid'; // or 'block' depending on your layout
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ✅ Refresh only the active product category's section
+function refreshActiveCategory() {
+  fetch('Products.html')
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newSection = doc.querySelector(`#${activeCategory}`);
+      const currentSection = document.getElementById(activeCategory);
+
+      if (newSection && currentSection) {
+        currentSection.innerHTML = newSection.innerHTML;
+      } else {
+        console.error('Could not find section in current or fetched HTML.');
+      }
+    })
+    .catch(error => console.error('Error loading section:', error));
+}
+// For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.querySelector('.content');
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    icon.textContent = '🌞';
+  }
+});
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const sidebar = document.querySelector(".sidebar");
+  const accountimg = document.getElementById('img4user');
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      accountimg.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+const hamburger = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+function myFunctionH(x) {
+  x.classList.toggle("change");
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const cartSidebar = document.getElementById("cartSidebar");
+  const addToCartBtn = document.getElementById("add2CartBtn");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const checkitout = document.getElementById('checker');
+
+  let cart = [], cartCount = 0;
+
+  // Add product to cart
+  function addToCart(product) {
+    const existing = cart.find(i => i.name === product.name);
+    if (existing) existing.quantity++;
+    else cart.push({ ...product });
+    cartCount++;
+    renderCart();
+  }
+
+  // Render cart
+  function renderCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      emptyCartM.style.display = "block";
+      cartTotal.textContent = "Rs.0";
+      checkitout.classList.add("disabler");
+      checkitout.setAttribute("disabled", "");
+      return;
+    } else {
+      checkitout.removeAttribute("disabled");
+      checkitout.classList.remove("disabler");
+      emptyCartM.style.display = "none";
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <img src="${item.image}" alt="">
+        <div class="cart-item-details">
+          <p><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button onclick="changeQty(${i}, -1)">−</button>
+            <span>${item.quantity}</span>
+            <button onclick="changeQty(${i}, 1)">+</button>
+          </div>
+          <p>Rs. ${item.price * item.quantity}</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+        </div>`;
+      cartItems.appendChild(div);
+    });
+
+    cartTotal.textContent = `Rs.${total}`;
+  }
+
+  // Quantity changer
+  window.changeQty = function(i, delta) {
+    cart[i].quantity += delta;
+    cartCount += delta;
+    if (cart[i].quantity <= 0) {
+      cart.splice(i, 1);
+    }
+    renderCart();
+  };
+
+  // To Redirecting current page to the Checkout Page
+  checkitout.addEventListener("click", function(){
+    if (cartItems.innerHTML != ""){
+      window.location.href="Checkout.html";
+      checkitout.classList.remove("disabler");
+    }
+    else {
+      checkitout.setAttribute("disabled", "");
+      checkitout.classList.add("disabler");
+    }
+  })
+
+  // Remove item
+  window.removeItem = function(i) {
+    cartCount -= cart[i].quantity;
+    cart.splice(i, 1);
+    renderCart();
+  };
+
+  // Handle all product buttons dynamically
+  document.querySelectorAll(".product-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const name = card.dataset.name || "Unnamed";
+      const title = card.dataset.title || name;
+      const color = card.dataset.color || "White";
+      const price = parseInt(card.dataset.price, 10);
+      const image = card.dataset.image || "https://via.placeholder.com/80";
+
+      if (!name || isNaN(price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart({ name, title, price, image, color: "color : " +color, quantity: 1 });
+      cartSidebar.classList.add("open");
+    });
+  });
+
+  // Open sidebar from static buttons
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener("click", () => {
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  if (addToCartBtn2) {
+    addToCartBtn2.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  // Close sidebar
+  closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("open");
+  });
+});
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

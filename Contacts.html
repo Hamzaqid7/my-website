@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>H & M Computers</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .CenterText {
+    display: none;
+  }
+  #hoverText {
+  color: #fff;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, #000000b6, #8b8585b6);
+  }
+  .CCh2 {
+    font-weight: 600;
+  }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+.whatsapp-float img {
+  width: 150px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+#alert {
+      display: none;
+      background-color: #60e665;
+      padding: 10px 25px;
+      border-radius: 15px;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999999;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-align: center;
+      border: 1px solid #000;
+      box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    /* For Desktop Screen Size */
+@media (min-width: 1281px) {
+.Main-infoC {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.Main-infoCP {
+  position: absolute;
+  top: 28rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 15px;
+}
+.Main-infoC h3 {
+  font-size: 4.8rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC p {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP p {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP img {
+  width: 70px;
+  height: 70px;
+  transition: opacity 0.4s ease;
+}
+.ContactBgstyle {
+  width: auto;
+  max-width: 100%;
+  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: -1;
+  }
+  .ContactBgstyle img {
+    width: 100%;
+    height: 650px;
+  }
+.containerC25 {
+  width: auto;
+  padding: 30px 20px;
+  margin-top: 0;
+}
+
+h1.CC {
+  text-align: center;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+  }
+.CCh2 {
+  font-size: 2.5rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  width: 80%;
+  text-decoration: underline;
+}
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    }
+    .contact-form, .contact-info {
+      width: 80%;
+      background: #bebdbd;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      height: 670px;
+    }
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: left;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-form label {
+      font-size: 1.4rem;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 20px 10px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 16px;
+      resize: vertical;
+      width: 80%;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      width: 80%;
+      background: #1e90ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-info h3 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #1e90ff;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+    .map {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+  }
+  /* For Smallest Screen Size */
+@media (min-width: 220px) and (max-width: 374px) {
+.CCh2 {
+  font-size: 2.25rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 80%;
+  text-decoration: underline;
+}
+.Main-infoC {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoCP {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 15px;
+}
+.Main-infoC h3 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP p {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP img {
+  width: 48px;
+  height: 48px;
+  transition: opacity 0.4s ease;
+}
+.ContactBgstyle {
+  width: auto;
+  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ContactBgstyle img {
+  width: 100%;
+  height: 450px;
+}
+.containerC25 {
+  width: auto;
+  padding: 30px 20px;
+  }
+h1.CC {
+  text-align: center;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-form, .contact-info {
+      width: 100%;
+      background: #bebdbd;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .contact-form label {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      background-color: #ffffffb0;
+      width: 80%;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+
+    .contact-info h3 {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+      color: #000;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+  }
+  /* For Larger Screens */
+@media (min-width: 375px) and (max-width: 767px) {
+.CCh2 {
+  font-size: 2rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 80%;
+  text-decoration: underline;
+  }
+.Main-infoC {
+  position: absolute;
+  top: 4.5rem;
+  width: 100%;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoCP {
+  position: absolute;
+  top: 9.85rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 15px;
+}
+.Main-infoC h3 {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP p {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP img {
+  width: 48px;
+  height: 48px;
+  transition: opacity 0.4s ease;
+}
+.ContactBgstyle {
+  width: auto;
+  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ContactBgstyle img {
+  width: 100%;
+  height: 470px;
+}
+  .containerC25 {
+    margin-top: 2rem;
+    width: auto;
+    padding: 30px 20px;
+  }
+
+h1.CC {
+  text-align: center;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+    }
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-form, .contact-info {
+      width: 100%;
+      background: #bebdbd;
+      padding: 25px 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form label {
+    font-size: 1.4rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  .contact-form input, 
+  .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      background-color: #ffffffb0;
+      width: 80%;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-info h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #1e90ff;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }  
+  }
+  /* For Tablet Viewport */
+@media (min-width: 768px) and (max-width: 1280px) {
+.CCh2 {
+  font-size: 2.35rem;
+  text-align: left;
+  color: #1e90ff;
+  word-wrap: break-word;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-weight: 600;
+  width: 80%;
+  text-decoration: underline;
+  }
+.Main-infoC {
+  position: absolute;
+  top: 4.2rem;
+  width: 100%;
+  height: 466px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.Main-infoCP {
+  position: absolute;
+  top: 9.2rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: -1;
+  gap: 15px;
+}
+.Main-infoC h3 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2.7rem;
+  letter-spacing: 2.5px;
+  text-decoration: underline;
+}
+.Main-infoC p {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP p {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+.Main-infoCP img {
+  width: 48px;
+  height: 48px;
+  transition: opacity 0.4s ease;
+}
+.ContactBgstyle {
+  width: auto;
+  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ContactBgstyle img {
+  width: 100%;
+  height: 470px;
+}
+.containerC25 {
+  margin-top: 2rem;
+  width: auto;
+  padding: 30px 20px;
+}
+h1.CC {
+  text-align: center;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  text-decoration: underline;
+  border-bottom: 5px solid saddlebrown;
+}
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+  .contact-form, .contact-info {
+    width: 100%;
+    background: #bebdbd;
+    height: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form label {
+    font-size: 1.4rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: normal;
+      resize: vertical;
+      width: 80%;
+      background-color: #ffffffb0;
+    }
+    .contact-form button {
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background: #1e90ff;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+    .contact-info h3 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #1e90ff;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    } 
+  }
+  </style>
+</head>
+<body>
+<!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+  <header class="navbar">
+    <img src="Images/favicon.ico" class="logo">
+    <h1 class="Hero-heading"><a style="color: #fff;" href="file:///C:/Users/AS%20COMPUTER/Documents/Hamza%20Computers/index.html">H & M Computers</a></h1>
+    <button id="add2CartBtn" class="hideondesk">🛒</button>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle" onclick="myFunctionH(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="nav-container" id="draggableNav">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="About-Us.html">About Us</a>
+      <a href="Checkout.html">Checkout</a>
+      <a href="Contacts.html">Contact</a>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About Us</a></li>
+      <li><a class="nav-link" href="Checkout.html">Checkout</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+      <button id="add2CartBtn2" class="hideontab">🛒</button>
+    </nav>
+  </header>
+  
+<div class="content">
+  <!-- User Account Icon -->
+  <div class="user-account" id="user-panel">
+    <img id="img4user" src="Images/User-icon.png" width="auto" height="auto" alt="user-account icon" loading="lazy">
+  </div>
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>Hamza Aijaz</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span> Apki Details</li>
+      <li><span class="icon">❤️</span> Favourites</li>
+      <li><span class="icon">📍</span> Addresses</li>
+      <li><span class="icon">🔔</span> Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+  <!-- Theme Mode Toggle Btn -->
+  <label class="theme-switch" title="Change body theme">
+  <input type="checkbox" id="toggleTheme">
+  <span class="slider">
+    <span class="icon" id="modeIcon">🌞</span>
+  </span>
+  </label>
+<div class="Main-infoC" id="hoverText">
+    <h3 class="dm-serif-text-regular">Reach Us Out</h3>
+    <p class="dm-serif-text-regular-italic">Feel Free To Ask Any Question To Us Because We're Just One Call Away!</p>
+    <div class="Main-infoCP" id="hoverText">
+    <img src="Images/Whatsapp-icon.png" width="auto" height="auto" loading="lazy" alt="Whatsappicon">
+    <p class="dm-serif-text-regular-italic">Whatsapp Us at : 0332 3715253</p>
+    <img src="Images/telephoneF.png" width="auto" height="auto" loading="lazy" alt="Telephone">
+    <p class="dm-serif-text-regular-italic">Telephone Us at : 021-22371456</p>
+    <img src="Images/gmailF.png" width="auto" height="auto" loading="lazy" alt="gmail">
+    <p class="dm-serif-text-regular-italic">Email Us at : hamzaaijaz41@gmail.com</p>
+    </div>
+  </div>
+<div class="ContactBgstyle">
+    <img src="Images/ContactbgImage.jpg" width="auto" height="auto" loading="lazy" alt="Contact-Us">
+</div>
+<h1 class="CC dm-serif-text-regular-italic">Contact Us</h1>
+<h2 class="CCh2">Fill Out The Form, So We Can Help You Out !</h2>
+<div class="containerC25">
+    <div class="contact-wrapper">
+
+      <!-- Contact Form -->
+    <div class="contact-form">  
+        <form id="contactForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="username" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subjects" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="messages" rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+    </div>
+      <div id="alert"></div>
+<script>
+const form = document.getElementById("contactForm");
+const alertBox = document.getElementById("alert");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // prevent default form submission
+
+      const formData = new FormData(form);
+      const email = formData.get("email");
+
+      // Send request to PHP without reloading page
+      const response = await fetch("contact.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const text = await response.text();
+
+      // Show alert with response
+      alertBox.textContent = text;
+      alertBox.style.display = "flex";
+
+      // Auto-hide alert after 3 seconds
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 3000);
+
+      // Clear form input
+      form.reset();
+    });
+</script>
+
+      <!-- Contact Info + Map -->
+      <div class="contact-info">
+        <h3 class="TemplateH">Our Store Address</h3>
+        <p><strong>Email:</strong> support@thelaptopclub.com</p>
+        <p><strong>Phone:</strong> +92 300 1234567</p>
+        <p><strong>Address:</strong> Shop #10, Tech Market, Karachi, Pakistan</p>
+
+        <div class="map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.504029649986!2d67.03023961500007!3d24.86142298405692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e9ba60b1e6f%3A0x1e5e9d8ff572cd84!2sTech%20Market!5e0!3m2!1sen!2s!4v1615459653734!5m2!1sen!2s" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Whatsapp Integration -->
+<a href="https://wa.me/923323715253" class="whatsapp-float" target="_blank" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'engagement', 'event_label': 'WhatsApp Contact' });">
+  <img src="Images/Whatsappicon.png" loading="lazy" alt="WhatsApp Chat">
+</a>
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span>YOUR CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">Rs.0</span></p>
+    <div class="cart-buttons">
+      <button class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!--Scroll to Top Button-->
+<img id="scroll2top" onclick="scrollToTop()" src="Images/up-arrow.png" width="100px" height="100px" loading="lazy">
+
+    <!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - Reliable like a dost</h2>
+      <p>Quality laptops, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.png" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.png" width="auto" height="auto" loading="lazy"><p>+92 300 1234567</p>
+      
+      <img src="Images/LocationF.png" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('draggableNav');
+  let isDragging = false;
+  let startX, startLeft;
+
+  nav.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startLeft = nav.offsetLeft;
+  });
+
+  nav.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    const deltaX = e.touches[0].clientX - startX;
+    let newLeft = startLeft + deltaX;
+    
+    // Limit movement within the screen
+    const maxLeft = window.innerWidth - nav.offsetWidth;
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+    nav.style.left = newLeft + 'px';
+  });
+
+  nav.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+
+// For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.querySelector('.content');
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    icon.textContent = '🌞';
+  }
+});
+// For Custom Mouse Trailing Effect
+const trail = document.querySelector(".cursor-trail");
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  trail.style.transform = `translate(${x}px, ${y}px)`;
+});
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const sidebar = document.querySelector(".sidebar");
+  const accountimg = document.getElementById('img4user');
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      accountimg.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+// Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+const hamburger = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+function myFunctionH(x) {
+  x.classList.toggle("change");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartSidebar = document.getElementById("cartSidebar");
+  const addToCartBtn = document.getElementById("add2CartBtn");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const checkitout = document.getElementById('checker');
+
+  let cart = [], cartCount = 0;
+
+  // Add product to cart
+  function addToCart(product) {
+    const existing = cart.find(i => i.name === product.name);
+    if (existing) existing.quantity++;
+    else cart.push({ ...product });
+    cartCount++;
+    renderCart();
+  }
+
+  // Render cart
+  function renderCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      emptyCartM.style.display = "block";
+      cartTotal.textContent = "Rs.0";
+      checkitout.setAttribute("disabled", "");
+      return;
+    } else {
+      checkitout.removeAttribute("disabled");
+      checkitout.classList.remove("disabler");
+      emptyCartM.style.display = "none";
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <img src="${item.image}" alt="">
+        <div class="cart-item-details">
+          <p><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button onclick="changeQty(${i}, -1)">−</button>
+            <span>${item.quantity}</span>
+            <button onclick="changeQty(${i}, 1)">+</button>
+          </div>
+          <p>Rs. ${item.price * item.quantity}</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+        </div>`;
+      cartItems.appendChild(div);
+    });
+
+    cartTotal.textContent = `Rs.${total}`;
+  }
+
+  // Quantity changer
+  window.changeQty = function(i, delta) {
+    cart[i].quantity += delta;
+    cartCount += delta;
+    if (cart[i].quantity <= 0) {
+      cart.splice(i, 1);
+    }
+    renderCart();
+  };
+
+  // Remove item
+  window.removeItem = function(i) {
+    cartCount -= cart[i].quantity;
+    cart.splice(i, 1);
+    renderCart();
+    emptyCartMessage.style.display = "block";
+  };
+
+  // Handle all product buttons dynamically
+  document.querySelectorAll(".product-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const name = card.dataset.name || "Unnamed";
+      const title = card.dataset.title || name;
+      const color = card.dataset.color || "White";
+      const price = parseInt(card.dataset.price, 10);
+      const image = card.dataset.image || "https://via.placeholder.com/80";
+
+      if (!name || isNaN(price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart({ name, title, price, image, color: "color : " +color, quantity: 1 });
+      cartSidebar.classList.add("open");
+    });
+  });
+
+  // Open sidebar from static buttons
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener("click", () => {
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  if (addToCartBtn2) {
+    addToCartBtn2.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  // Close sidebar
+  closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("open");
+  });
+});
+</script>
+  <script src="script.js"></script>
+</body>
+</html>

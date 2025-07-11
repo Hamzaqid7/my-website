@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>H & M Computers</title>
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <meta content="">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .disabler {
+  background-color: gray;
+  color: #fff;
+  }
+  </style>
+</head>
+<body>
+<!-- For Mouse Cursor Trailing Effect -->
+  <div class="cursor-trail"></div>
+  <header class="navbar">
+    <img src="Images/favicon.ico" class="logo">
+    <h1 class="Hero-heading animateddiv slide-in-top"><a style="color: #fff;" href="index.html">H & M Computers</a></h1>
+    <button id="add2CartBtn" class="hideondesk">🛒</button>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="nav-container" id="draggableNav">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="About-Us.html">About Us</a>
+      <a href="Checkout.html">Checkout</a>
+      <a href="Contacts.html">Contact</a>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About Us</a></li>
+      <li><a class="nav-link" href="Checkout.html">Checkout</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+      <button id="add2CartBtn2" class="hideontab">🛒</button>
+    </nav>
+  </header>
+
+<div class="content">
+<!-- User Account Icon -->
+  <div class="user-account" id="user-panel">
+    <img id="img4user" src="Images/User-icon.png" width="auto" height="auto" alt="user-account icon" loading="lazy">
+  </div>
+  <div class="sidebar">
+    <!-- Hamburger Icon 2 -->
+    <div class="cross-icon" id="menuToggle2"></div>
+  <div class="profile">
+    <div class="avatar">
+      <img src="Images/man.png" alt="avatar" loading="lazy" width="auto" height="auto">
+    </div>
+    <h2>Hamza Aijaz</h2>
+  </div>
+
+  <div class="section">
+    <h3>Profile</h3>
+    <ul>
+      <li><span class="icon">👤</span> Apki Details</li>
+      <li><span class="icon">❤️</span> Favourites</li>
+      <li><span class="icon">📍</span> Addresses</li>
+      <li><span class="icon">🔔</span> Inbox</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Support</h3>
+    <ul>
+      <li><span class="icon">❗</span> Help Center</li>
+      <li><span class="icon">🛡️</span> Privacy Policy</li>
+      <li><span class="icon">💬</span> Humse raabta karein</li>
+    </ul>
+  </div>
+</div>
+  <!-- Theme Mode Toggle Btn -->
+  <label class="theme-switch" title="Change body theme">
+  <input type="checkbox" id="toggleTheme">
+  <span class="slider">
+    <span class="icon" id="modeIcon">🌞</span>
+  </span>
+  </label>
+<div class="carousel-container">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel">
+      <div class="slide"><img src="Images/ImgC-1.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="Images/ImgC-2.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="Images/ImgC-3.webp" alt="Slide 3"></div>
+      <div class="slide"><img src="Images/ImgC-4.webp" alt="Slide 4"></div>
+      <div class="slide"><img src="Images/ImgC-5.webp" alt="Slide 5"></div>
+      <div class="dots"></div>
+    </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button> 
+  </div>
+  
+  <div class="Slogan1">
+    <h1 style="text-align: center;" class="dm-serif-text-regular-italic animateddiv slide-in-left">Reliable Like A Dost!</h1>
+  </div>
+  <!-- Why Choose Us Section -->
+    <section class="animateddiv slide-in-top" id="WCU7" style="width: 100%; height: auto; padding: 1rem 0;">
+      <div style="background: linear-gradient(90deg, #347dcf, #082985);" class="container">
+          <h2>Why Choose Us ?</h2>
+          <div style="color: #fff;" class="texter-section">
+          <p>We are known for our significantly transparent charges and quality services among top tech-experts of the city!</p>
+          <div class="divider"><img src="Images/Divider-icon.webp" loading="lazy" alt="divider-icon"></div>
+          <p>We help our customers in getting upgraded to the latest technologies which can easily cater their needs!</p>
+          </div>
+        <div class="Image-section">
+          <img class="imageM" src="Images/WCU Pic.png" loading="lazy" width="auto" height="auto" alt="Why Choose Us image">
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section - End -->
+
+<div id="content88">
+      <h2 class="animateddiv slide-in-top dm-serif-text-regular" id="Main-heading">Our Top Performing Categories</h2>
+    
+      <div id="Categories"><a class="category-tab active" data-category="laptops" data-target="laptops" value="laptops"> Laptops </a><a class="category-tab" data-category="printers" data-target="printers" value="printers"> Printers </a><a class="category-tab" data-category="monitors" data-target="monitors" value="monitors"> Monitors </a><a class="category-tab" data-category="computers" data-target="computers" value="computers"> Computers </a></div>
+  <div class="parent4sort">
+    <div class="price-sorting">
+        <label for="sortPrice">Sort by Price:</label>
+        <select id="sortPrice">
+          <option value="Default" selected disabled>By Default</option>
+          <option value="lowToHigh">Low to High</option>
+          <option value="highToLow">High to Low</option>
+        </select>
+    </div>
+      <!-- Search Bar Section -->
+    <div class="search-container">
+      <input type="text" id="productSearch" placeholder="Search products..." />
+    </div>
+  </div>    
+<section class="products4P animateddiv slide-in-left">
+
+    <section class="products product-menu" id="laptops">
+    <!-- For Laptops catalogue -->
+      <div class="product-card" data-price="43000" data-name="Dell Latitude 5400 i5-7th gen" data-color="Black" data-image="Images/Dell 5400 laptop.png">
+        <img src="Images/Dell 5400 laptop.png" alt="Laptop 1">
+        <h3>Dell Latitude 5400 i5-7th gen 8/128gb SSD with 14" screen size</h3>
+        <p class="p4des">Lightweight laptop | Best For Studenst & Freelancers | Refurbished Laptop</p>
+        <p class="pricetag">Rs 43,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="55000" data-name="Dell Precision 7730 i5-8th gen" data-color="Black" data-image="Images/D-7730.webp">
+        <img src="Images/D-7730.webp" alt="Laptop 2">
+        <h3>Dell Precision 7730 i5-8th gen 8/128gb SSD with 15.5" screen size </h3>
+        <p class="p4des"> Gaming PC with 4gb Nvidia Graphics Card | Best For Gamers | Refurbished Laptop</p>
+        <p class="pricetag">Rs 55,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="22500" data-name="Lenovo T430 i5-3rd gen" data-color="Black" data-image="Images/L-t430.png">
+        <img src="Images/L-t430.png" alt="Laptop 3">
+        <h3>Lenovo T430 i5-3rd gen 8/128gb SSD with 14" screen size </h3>
+        <p class="p4des">With Dual Battery | Best For Student | U-Series Processor installed | Refurbished Laptop</p>
+        <p class="pricetag">Rs 22,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="115000" data-name="Hp 840 g7 i5-10th gen" data-color="Silver" data-image="Images/HP-840g7.png">
+        <img src="Images/HP-840g7.png" alt="Laptop 4">
+        <h3>Hp 840 g7 i5-10th gen 8/256gb SSD with 14.4" touchscreen </h3>
+        <p class="p4des">2gb Intel graphics card | Best For Teachers | Available in Silver color | Ligtweight</p>
+        <p class="pricetag">Rs 115,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="36000" data-name="Lenovo T470 i5-7th gen" data-color="Black" data-image="Image/Lenovo T470.png">
+        <img src="Images/Lenovo T470.png" alt="Laptop 3">
+        <h3>Lenovo T470 i5-7th gen 8/256gb SSD with 14" touchscreen screen size</h3>
+        <p class="p4des">Ligtweight & Top Selling Model | Dual Battery installed | Refurbished Condition</p>
+        <p class="pricetag">Rs 36,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="105000" data-name="Dell Precision 3541 i5-9th gen" data-color="Black" data-image="Images/Dell Precision 3541.png">
+        <img src="Images/Dell Precision 3541.png" alt="Laptop 4">
+        <h3>Dell Precision 3541 i5-9th gen 8/256gb SSD with 14.4" IPS Display</h3>
+        <p class="p4des">Backlit Keyboard | Matte Silver Color | 120Hz Refresh rate | Refurbished Condition</p>
+        <p class="pricetag">Rs 105,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="43000" data-name="Lenovo T480 i5-8th gen" data-color="Black" data-image="Images/Lenovo T480.png">
+        <img src="Images/Lenovo T480.png" alt="Laptop 5">
+        <h3>Lenovo T480 i5-8th gen 8/256gb SSD with 14" touchscreen screen </h3>
+        <p class="p4des">4gb graphics card | Best for Gamers | 1080P IPS Touchscreen Display with Camera</p>
+        <p class="pricetag">Rs 43,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="65000" data-name="Dell Precision 3510 i5-10th gen" data-color="Navy Blue" data-image="Images/Dell 3510.png">
+        <img src="Images/Dell 3510.png" alt="Laptop 6">
+        <h3>Dell Precision 3510 i5-10th gen 8/256gb SSD with 14.4" IPS Display</h3>
+        <p class="p4des">Type-C charging port | Multi-threading supported | Refurbished Condition</p>
+        <p class="pricetag"> Rs 65,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+    
+    <section class="products product-menu" id="printers" style="display: none;">
+    
+    <!-- For Printers catalogue -->
+      <div class="product-card" data-price="173000" data-name="Xerox WC-7535 Photocopier Machine" data-image="Images/Xerox printer.png">
+        <img src="Images/Xerox printer.png" alt="printer 1">
+        <h3>Xerox-WC-7535 Refurbished Photocopier Machine AC-220v Power Supply</h3>
+        <p class="p4des">1 Month Warranty | Duplex Printing | USB Connectivity | 2s 500 sheets input tray</p>
+        <p class="pricetag">Rs 173,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="90000" data-name="Ricoh Aficio 301 Laserjet Printer" data-image="Images/Ricoh printer.png">
+        <img src="Images/Ricoh printer.png" alt="printer 2">
+        <h3>Ricoh Aficio 301 Laserjet Printer RC-series - Best Printer For Businesses & Offices</h3>
+        <p class="p4des">Energy saving feature | Wireless Connectivity | 3.0 USB Port | IOT features with USB Compatibility</p>
+        <p class="pricetag">Rs 90,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="42400" data-name="Canon Inkjet PIXMA G1010" data-image="Images/Canon printer.png">
+        <img src="Images/Canon printer.png" alt="printer 3">
+        <h3>Canon Inkjet PIXMA G1010 Printer - No.1 Color Printer Popular For Its Sleek design</h3>
+        <p class="p4des">300dpi borderless printing enabled | Duplex Printing supported | Wireless Connectivity | 200 sheets input</p>
+        <p class="pricetag">Rs 41,400 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="65000" data-name="Hp Office-jet Pro 7720" data-image="Images/Hp printer.png">
+        <img src="Images/Hp printer.png" alt="printer 4">
+        <h3>Hp Office-jet Pro 7720 A3 All-in-one Printer Functions : Print, copy, scan, fax</h3>
+        <p class="p4des">600dpi borderless printing enabled | Wireless & Bluetooth Connectivity | Duplex Printing supported | 250 sheets input</p>
+        <p class="pricetag">Rs 65,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="74000" data-name="Hp C2023LJB1 Color Laserjet Printer" data-image="Images/Hp Color Laserjet.png">
+        <img src="Images/Hp Color Laserjet.png" alt="printer 5">
+        <h3>HP Color Laserjet Printer C2023LJB1, Designed for High-Volume Printing At Low-Energy</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 250 sheets input</p>
+        <p class="pricetag">Rs 74,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="62000" data-name="Epson EQ789J2H Color Inkjet Printer" data-image="Images/Epson Eco-tank L3250.png">
+        <img src="Images/Epson Eco-tank L3250.png" alt="printer 6">
+        <h3>Epson EQ789J2H Color Inkjet Printer with Eco-friendly and Energy Saving Feature | Office Printer</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 180 sheets input tray</p>
+        <p class="pricetag">Rs 62,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="34000" data-name="Canon PIXMA TR-4550" data-image="Images/Canon-TR4550 Color Printer.png">
+        <img src="Images/Canon-TR4550 Color Printer.png" alt="printer 7">
+        <h3>Canon PIXMA TR-4550 A4 Color Multi-function Inkjet Printer | lightweight Portable Printer </h3>
+        <p class="p4des">600dpi color & black print resolution | Wireless & Bluetooth Connectivity | 250 sheets input</p>
+        <p class="pricetag">Rs 34,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="68000" data-name="Hp 8600 Office-jet Pro Plus" data-image="Images/HP Officejet Pro 8600.webp">
+        <img src="Images/HP Officejet Pro 8600.webp" alt="printer 8">
+        <h3>Hp 8600 Office-jet Pro plus  series-N911 Color Printer with Eco-friendly system installed</h3>
+        <p class="p4des">300dpi color & black print resolution | Wireless & Bluetooth Connectivity | 150 sheets input</p>
+        <p class="pricetag">Rs 68,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+    
+    <section class="products product-menu" id="monitors" style="display: none;">
+    
+    <!-- For Monitors catalogue -->
+      <div class="product-card" data-price="57500" data-name="Hp 5S24GHQ 24 inch LED Monitor Series 5" data-image="Images/Monitor pic-2.png">
+        <img src="Images/Monitor pic-2.png" alt="Monitor 1">
+        <h3>Hp Series 5 5S24GHQ 24" IPS panel with 75Hz refresh rate - 4k videos supported with 24fps Video Quality</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 57,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="60000" data-name="AOC 27G2N 180Hz 1080P Gaming Monitor" data-image="Images/Monitor pic-1.webp">
+        <img src="Images/Monitor pic-1.webp" alt="Monitor 2">
+        <h3>AOC 27G2N 27" 180Hz 1080P Gaming Monitor - 8k videos supported with 60 fps Video Quality</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 60,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="47999" data-name="AOC 24G2SP 1080P Gaming Monitor" data-image="Images/Monitor pic-3.png">
+        <img src="Images/Monitor pic-3.png" alt="Monitor 3">
+        <h3>AOC 24G2SP 1080P Gaming Monitor with IPS panel with 165Hz - Enhance your Gaming Experience</h3>
+        <p class="p4product">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 47,999 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="34900" data-name="Phillips M2722H" data-image="Images/Monitor pic-4.png">
+        <img src="Images/Monitor pic-4.png" alt="Monitor 4">
+        <h3>Phillips M2722H 27inch IPS FHD Monitor - International Branded Monitor with 2k Resolution</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 34,990 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="36000" data-name="ASUS ASJ2025Q" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 5">
+        <h3>ASUS ASJ2025Q 24" LED IPS Monitor with 120Hz Refresh Rate - 1080p Resolution & 4k Videos supported</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 36,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="30999" data-name="Samsung S24QHJ7" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 6">
+        <h3>Samsung S24QHJ7 24" LED IPS Curve Display Monitor - 120Hz Refresh rate & 1080P Screen Resolution </h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 30,999 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="33000" data-name="Dell P22DBJHQ" data-image="Images/Monitor pic-5.png">
+        <img src="Images/Monitor pic-5.png" alt="Monitor 7">
+        <h3>Dell P22DBJHQ 22" screen with IPS LED Display - 4k videos supported with 2 3.0 USB ports</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 33,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="32000" data-name="Hp S32DBHLP" data-image="Images/Monitor pic-6.png">
+        <img src="Images/Monitor pic-6.png" alt="Monitor 8">
+        <h3>Hp S32DBHLP 32" LED Screen with FHD Panel - 120Hz Refresh Rate Supported & 4K Resolution</h3>
+        <p class="p4des">High Screen Resolution | Wide Screen with IPS Panel | HDMI, VGA Ports supported | Bright Colors</p>
+        <p class="pricetag">Rs 32,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="products product-menu" id="computers" style="display: none;">
+    
+    <!-- For Computers catalogue -->
+      <div class="product-card" data-price="16000" data-name="Dell Optiplex 7010" data-image="Images/Computer pc pic-2.jpg">
+        <img src="Images/Computer pc pic-2.jpg" alt="Computer 1">
+        <h3>Dell Optiplex 7010 i5-3rd gen with 8/128gb memory | Tower PC | with Intel UHD Graphics 64mb Vram available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 16,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="17500" data-name="Dell Optiplex 9020" data-image="Images/Computer pc pic-3.jpg">
+        <img src="Images/Computer pc pic-3.jpg" alt="Computer 2">
+        <h3>Dell Optiplex 9020 i5-7th gen with 16/256gb memory Tower PC | AC 220v  | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 17,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="66500" data-name="Lenovo Workstation i5-8th gen" data-image="Images/Computer pc pic-4.jpg">
+        <img src="Images/Computer pc pic-4.jpg" alt="Computer 3">
+        <h3>Lenovo Workstation with i5-8th gen 16/256gb memory Tower PC | AC 220v | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 65,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="170000" data-name="Hp Pro Tower G29" data-image="Images/Computer pc pic-1.webp">
+        <img src="Images/Computer pc pic-1.webp" alt="Computer 4">
+        <h3>HP Pro Tower 290 G29 8/512gb memory Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 170,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="6000" data-name="Dell Optiplex 5040" data-image="Images/Dell Optiplex 5020.png">
+        <img src="Images/Dell Optiplex 5040.png" alt="Computer 5">
+        <h3>Dell Optiplex 5040 2nd/3rd gen Desktop PC | i5-3H778P with 2 x DDR3 RAM Slots </h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 6,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="9500" data-name="Lenovo Thinkcenter M73" data-image="Images/Lenovo Thinkcentre M73.jpg">
+        <img src="Images/Lenovo Thinkcentre M73.jpg" alt="Computer 6">
+        <h3>Lenovo Thinkcenter M73 i5-4thgen | Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 9,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="21000" data-name="Dell Optiplex 4010" data-image="Images/Dell Optiplex 5040.png">
+        <img src="Images/Dell Optiplex 5040.png" alt="Computer 7">
+        <h3>Dell Optiplex 4010 i5-4th gen | Tower PC | AC 220v Power Supply | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 21,000 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product-card" data-price="28500" data-name="Hp ADB20JQP" data-image="Images/Lenovo Thinkcentre M73.jpg">
+        <img src="Images/Lenovo Thinkcentre M73.jpg" alt="Computer 8">
+        <h3>Hp ADB20JQP All-in-one PC | i5-4th gen 16/512gb SSD | Tower PC | AC 220v | VGA, DP, HDMI ports available</h3>
+        <p class="p4des">Multi-threading, virtualization and DEP supported | Wireless & Bluetooth Connectivity | USB 3.0 Supported | Built-in Speakers</p>
+        <p class="pricetag">Rs 28,500 /-* only</p>
+        <p class="p4product" aria-disabled="true">* Prices are subject to fluctuation of Currencies</p>
+        <button id="add2CartBtn">🛒 Add to Cart</button>
+        </div>
+      </section>
+    </section>
+
+</div>
+
+    <!--Second Carousel 4 Reviews-->
+  <section class="Carousel2S">
+    <h2 class="TestimonialH">Hear From Our Customers</h2>
+    <div class="carousel-container2 animateddiv">
+    <button class="prev2" onclick="prevSlide()">&#10094;</button>
+    <div class="carousel2">
+      <div class="slide2"><p>"Amazing service and fast delivery. The product quality is top-notch!"</p>
+      <img src="Images/Image4T-1.png" loading="lazy" width="auto" height="auto" alt="Image For Testimonial-1"><h4>- Naeem Siddiqui - Owner of Agha Sajji Restaurant</h4></div>
+      <div class="slide2"><p>"Customer support was really helpful. Will shop again for sure!"</p>
+      <img src="Images/Image4T-2.png" loading="lazy" width="auto" height="auto" alt="Image For Testimonial-2"><h4>- Ayesha Khan - CEO of Contour Software Co.</h4></div>
+      <div class="slide2"><p>"Got exactly what I ordered, on time. Highly recommend this store."</p>
+      <img src="Images/Image4T-3.png" loading="lazy" width="auto" height="auto" alt="Image For Testimonial-3"><h4>- Imran Qureshi - IT Supplies Manager @ Digital Dividends Pvt. Co.</h4></div>
+      <div class="slide2"><p>"Great service and excellent quality products available at affordable prices in karachi."</p>
+      <img src="Images/Image4T-4.png" loading="lazy" width="auto" height="auto" alt="Image For Testimonial-4"><h4>- Fatima Hussain - IT Executive Officer @ Mangotech Solutions Pvt. Ltd.</h4></div>
+      <div class="slide2"><p>"I had a wonderful experience at 'H&M Computers', they made my IT purchasing experience trustful and easy."</p>
+      <img src="Images/Image4T-5.png" loading="lazy" width="auto" height="auto" alt="Image For Testimonial-5"><h4>- Nazish Begum - Owner of a popular Garments Boutique</h4></div>
+    </div>
+    <button class="next2" onclick="nextSlide()">&#10095;</button> 
+    </div>
+  </section>
+</div>
+<!--Right Sidebar4CheckoutOptions Page-->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <span>YOUR CART</span>
+    <button id="closeCart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p id="emptyCartMessage" class="empty-cart-msg">🛒 Your cart is empty!</p>
+    <!-- Items will be added dynamically -->
+  </div>
+  <div class="cart-total">
+    <p>Total <span id="cartTotal">Rs.0</span></p>
+    <div class="cart-buttons">
+      <button id="checker" class="checkout-btn disabler" disabled>Checkout</button>
+    </div>
+  </div>
+</div>
+<!--Right Sidebar Ends Here-->
+<!--Scroll to Top Button-->
+<img id="scroll2top" onclick="scrollToTop()" src="Images/up-arrow.png" width="100px" height="100px" loading="lazy">
+
+    <!-- Footer HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-section brand">
+      <h2>H & M Computers - Reliable like a dost</h2>
+      <p>Quality laptops, trusted service.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <div class="Images4F"><img src="Images/gmailF.png" width="auto" height="auto" loading="lazy"><p>support@h&mcom<br>puters.com</p>
+      
+      <img src="Images/telephoneF.png" width="auto" height="auto" loading="lazy"><p>+92 300 1234567</p>
+      
+      <img src="Images/LocationF.png" width="auto" height="auto" loading="lazy"><p>Karachi, Pakistan</p>
+      </div>
+    </div>
+
+          <!--Social Profile Icons-->
+          <div class="footer-section social">
+          <h3>Follow Us</h3>
+          
+          <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 H & M Computers. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+const elements = document.querySelectorAll('.animateddiv');
+const expandEl = document.querySelector('.carousel-container2');
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.add('expand-show');
+    } else {
+      entry.target.classList.remove('show');
+      entry.target.classList.remove('expand-show');
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+elements.forEach(el => observer.observe(el));
+observer.observe(expandEl);
+
+const categoryTabs = document.querySelectorAll(".category-tab");
+const productMenus = document.querySelectorAll(".product-menu");
+const sortSelect = document.getElementById('sortPrice');
+const ids = ['laptops', 'monitors', 'printers', 'computers'];
+let activeCategory = 'laptops'; // Default category
+
+  // Function to show a specific product menu
+  function showMenu(categoryId) {
+    productMenus.forEach(menu => {
+      menu.style.display = "none";
+    });
+
+    const targetMenu = document.getElementById(categoryId);
+    if (targetMenu) {
+      targetMenu.style.display = "grid";
+      activeCategory = categoryId; // Update the active category
+    }
+  }
+
+  // Initial setup: Show the first category's menu
+  showMenu(activeCategory);
+
+  // Add click event listeners to category tabs
+  categoryTabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      // Remove 'active' class from all tabs
+      categoryTabs.forEach(t => t.classList.remove("active"));
+
+      // Add 'active' class to the clicked tab
+      this.classList.add("active");
+
+      // Get the category ID from the data attribute
+      const categoryId = this.getAttribute("data-category");
+
+      // Show the corresponding product menu
+      showMenu(categoryId);
+    });
+  });
+
+  // Sort on price change
+  sortSelect.addEventListener('change', () => {
+    const productList = document.getElementById(activeCategory); // now dynamic
+    const products = Array.from(productList.querySelectorAll('.product-card'));
+
+    products.sort((a, b) => {
+      const priceA = parseInt(a.dataset.price);
+      const priceB = parseInt(b.dataset.price);
+      return sortSelect.value === 'lowToHigh' ? priceA - priceB : priceB - priceA;
+    });
+
+    productList.innerHTML = '';
+    products.forEach(product => productList.appendChild(product));
+  });
+
+  const nav = document.getElementById('draggableNav');
+  let isDragging = false;
+  let startX, startLeft;
+
+  nav.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startLeft = nav.offsetLeft;
+  });
+
+  nav.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    const deltaX = e.touches[0].clientX - startX;
+    let newLeft = startLeft + deltaX;
+    
+    // Limit movement within the screen
+    const maxLeft = window.innerWidth - nav.offsetWidth;
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+    nav.style.left = newLeft + 'px';
+  });
+
+  nav.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+  // For Changing Body theme
+const toggle = document.getElementById('toggleTheme');
+const icon = document.getElementById('modeIcon');
+const body = document.querySelector('.content');
+
+// Toggle theme on change
+toggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    icon.textContent = '🌙';
+  } else {
+    localStorage.setItem('theme', 'light');
+    icon.textContent = '🌞';
+  }
+});
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    icon.textContent = '🌙';
+  } else {
+    icon.textContent = '🌞';
+  }
+});
+
+// User Account Sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const userPanel = document.getElementById("user-panel");
+  const sidebar = document.querySelector(".sidebar");
+  const accountimg = document.getElementById('img4user');
+  const crossicon = document.querySelector('.cross-icon');
+
+  // Toggle sidebar visibility on icon click
+  let isSidebarOpen = false;
+
+  userPanel.addEventListener("click", () => {
+    if (!isSidebarOpen) {
+      sidebar.classList.add("active");
+      accountimg.classList.add("active");
+      isSidebarOpen = true;
+    }
+  });
+
+  // Close sidebar when cross icon is clicked
+  crossicon.addEventListener("click", () => {
+    if (isSidebarOpen) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", (e) => {
+    if (
+      isSidebarOpen &&
+      !sidebar.contains(e.target) &&
+      !userPanel.contains(e.target)
+    ) {
+      sidebar.classList.remove("active");
+      accountimg.classList.remove("active");
+      isSidebarOpen = false;
+    }
+  });
+});
+const hamburger = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle("change");
+});
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+  document.querySelector('.carousel2').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateCarousel();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+}
+
+// Autoplay functionality
+function startAutoplay() {
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+}
+
+// Start autoplay
+startAutoplay();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartSidebar = document.getElementById("cartSidebar");
+  const addToCartBtn = document.getElementById("add2CartBtn");
+  const addToCartBtn2 = document.getElementById("add2CartBtn2");
+  const closeCart = document.getElementById("closeCart");
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  const emptyCartM = document.querySelector(".empty-cart-msg");
+  const checkitout = document.getElementById('checker');
+
+  let cart = [], cartCount = 0;
+
+  // Add product to cart
+  function addToCart(product) {
+    const existing = cart.find(i => i.name === product.name);
+    if (existing) existing.quantity++;
+    else cart.push({ ...product });
+    cartCount++;
+    renderCart();
+  }
+
+  // Render cart
+  function renderCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+      emptyCartM.style.display = "block";
+      cartTotal.textContent = "Rs.0";
+      checkitout.classList.add("disabler");
+      checkitout.setAttribute("disabled", "");
+      return;
+    } else {
+      checkitout.removeAttribute("disabled");
+      checkitout.classList.remove("disabler");
+      emptyCartM.style.display = "none";
+    }
+
+    cart.forEach((item, i) => {
+      total += item.price * item.quantity;
+
+      const div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        <img src="${item.image}" alt="">
+        <div class="cart-item-details">
+          <p><strong>${item.title}</strong></p>
+          <p><em>${item.color}</em></p>
+          <div class="qty-controls">
+            <button onclick="changeQty(${i}, -1)">−</button>
+            <span>${item.quantity}</span>
+            <button onclick="changeQty(${i}, 1)">+</button>
+          </div>
+          <p>Rs. ${item.price * item.quantity}</p>
+          <span class="remove-item" onclick="removeItem(${i})">✕ Remove</span>
+        </div>`;
+      cartItems.appendChild(div);
+    });
+
+    cartTotal.textContent = `Rs.${total}`;
+  }
+
+  // Quantity changer
+  window.changeQty = function(i, delta) {
+    cart[i].quantity += delta;
+    cartCount += delta;
+    if (cart[i].quantity <= 0) {
+      cart.splice(i, 1);
+    }
+    renderCart();
+  };
+
+  // To Redirecting current page to the Checkout Page
+  checkitout.addEventListener("click", function(){
+    if (cartItems.innerHTML != ""){
+      window.location.href="Checkout.html";
+      checkitout.classList.remove("disabler");
+    }
+    else {
+      checkitout.setAttribute("disabled", "");
+      checkitout.classList.add("disabler");
+    }
+  })
+
+  // Remove item
+  window.removeItem = function(i) {
+    cartCount -= cart[i].quantity;
+    cart.splice(i, 1);
+    renderCart();
+  };
+
+  // Handle all product buttons dynamically
+  document.querySelectorAll(".product-card button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      const name = card.dataset.name || "Unnamed";
+      const title = card.dataset.title || name;
+      const color = card.dataset.color || "White";
+      const price = parseInt(card.dataset.price, 10);
+      const image = card.dataset.image || "https://via.placeholder.com/80";
+
+      if (!name || isNaN(price)) {
+        console.error("Product data missing");
+        return;
+      }
+      addToCart({ name, title, price, image, color: "color : " +color, quantity: 1 });
+      cartSidebar.classList.add("open");
+    });
+  });
+
+  // Open sidebar from static buttons
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener("click", () => {
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  if (addToCartBtn2) {
+    addToCartBtn2.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("change");
+      cartSidebar.classList.add("open");
+    });
+  }
+
+  // Close sidebar
+  closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("open");
+  });
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

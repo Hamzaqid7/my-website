@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+#alert {
+  font-size: 1.4rem;
+  width: 80%;
+  max-width: 80%;
+  height: fit-content;
+  color: #000;
+  display: none;
+}
+.empty-cart-msg {
+  position: sticky;
+  right: 40px;
+  top: 50%;
+  text-align: center;
+  font-size: 18px;
+  color: #363636;
+}
+      /* General Reset */
+@media (min-width: 1281px) {        
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, white 50%, rgb(247, 247, 247) 50%);
+}
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.checkout-btn {
+  flex: 1;
+  background: rgb(0, 102, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+        /*For Styling Of Checkout Page*/
+.containerCK {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  margin-top: 6rem;
+}
+.logo {
+  display: inline-block;
+  transition: transform 0.6s ease;
+  position: fixed;
+  top: 1.5rem;
+  left: 60px;
+  width: 50px;
+  height: 50px;
+}
+.logo:hover {
+  transform: rotateX(360deg);
+}
+.checkout-form {
+  background: #fff;
+  padding: 10px 60px;
+  border-radius: 8px;
+  width: auto;
+  border-right: 1px solid #000;
+}
+.checkout-form h2 {
+  margin: 20px 0 10px;
+  font-size: 26px;
+  font-weight: 500;
+}
+.texter,
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+select.active, select:hover {
+  cursor: pointer;
+}
+option:hover {
+  cursor: pointer;
+}
+.dicountinput {
+  width: 60%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+}
+input.error {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #135ab8;
+  border-radius: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.warning {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+.name-row input {
+  flex: 1;
+}
+label {
+  font-size: 16px;
+  font-family: sans-serif;
+  display: block;
+  margin: 5px 0;
+}
+.shipping-box {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+  font-family: sans-serif;
+  background: #cfcfcf83;
+}
+.payment-method {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #cfcfcf83;
+  font-family: sans-serif;
+}
+.order-btn {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.order-summary {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: 550px;
+  position: fixed;
+  right: 2.5rem;
+  top: 10rem;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.product img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 8rem;
+  top: 0rem;
+}
+.product-info {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  width: 100%;
+}
+.product-info h4 {
+  text-align: left;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.product-info p {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.apply-btn {
+  background: #000;
+  color: white;
+  padding: 15px 12px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.summary {
+  width: 80%;
+  margin-top: 20px;
+}
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.summary p:last-child {
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-top: 2px solid #686868;
+}
+.radiostyling {
+  padding-bottom: 1rem;
+}
+.border4radio1 {
+  background: #cfcfcf83;
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.border4radio2 {
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  border-bottom: 1px solid #ccc;
+}
+.Hero-heading {
+  position: fixed;
+  left: 8rem;
+  font-size: 3vw;
+}
+.nav-menu {
+  width: 100%;
+  padding-right: 12rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.nav-menu ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 60%;
+  justify-content: flex-end;
+ }
+ .nav-menu ul li {
+  margin-top: 0;
+  background: transparent;
+  letter-spacing: 1.5px;
+ }
+.nav-menu ul li a:hover {
+  color: rgb(170, 27, 214);
+  text-decoration: underline;
+  text-decoration-color: rgb(170, 27, 214);
+}
+.nav-link.active {
+  border-bottom: 2px solid #000;
+  color: rgb(10, 79, 230);
+  font-weight: 600;
+}
+.nav-menu ul li a {
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6rem;
+  display: block;
+  font-weight: 500;
+}
+.hideontab {
+  display: none;
+}
+}
+@media (min-width: 768px) and (max-width: 1280px){
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, white 50%, rgb(247, 247, 247) 50%);
+}
+.carticon4Ck {
+  display: none;
+}
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.checkout-btn {
+  flex: 1;
+  background: rgb(0, 102, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.menu-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #3f3f3f;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.nav-menu {
+  padding-top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  top: 5.8rem;
+  left: 0;
+  right: 0;
+  background-color: #bbbbbb;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1111;
+}
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.nav-menu ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+ul li:last-child {
+  border-bottom: none;
+  margin: 0;
+}
+.nav-menu ul li a {
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.nav-menu ul hr {
+  width: 90%;
+  margin: auto;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+#cartBtn {
+  margin-top: 0;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+.nav-menu.active {
+  max-height: 330px; /* Adjust based on number of items */
+}
+.nav-link.active {
+  color: blue;
+  text-decoration: underline;
+  font-weight: 700;
+}
+        /*For Styling Of Checkout Page*/
+.containerCK {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-top: 6rem;
+}
+.Hero-heading {
+  position: relative;
+  font-weight: 700;
+  word-spacing: 0.4rem; 
+  letter-spacing: 4px;
+  font-size: 2.5vw;
+  font-family: sans-serif; 
+  text-align: center;
+  font-style: italic;
+  text-shadow: 8px 10px 8px rgb(29, 198, 240);
+}
+.logo:hover {
+  transform: rotateX(360deg);
+}
+.checkout-form {
+  background: #fff;
+  padding: 10px 60px;
+  border-radius: 8px;
+  width: auto;
+  border-right: 1px solid #000;
+}
+.checkout-form h2 {
+  margin: 20px 0 10px;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.texter,
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+select.active, select:hover {
+  cursor: pointer;
+}
+option:hover {
+  cursor: pointer;
+}
+input.error {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #135ab8;
+  border-radius: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.warning {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+.name-row input {
+  flex: 1;
+}
+label {
+  font-size: 16px;
+  font-family: sans-serif;
+  display: block;
+  margin: 5px 0;
+}
+.shipping-box {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+  font-family: sans-serif;
+  background: #cfcfcf83;
+}
+.payment-method {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #cfcfcf83;
+  font-family: sans-serif;
+}
+.order-btn {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.order-summary {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: 370px;
+  position: fixed;
+  left: 50%;
+  top: 8rem;
+  padding-right: 1rem;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.product img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 8rem;
+  top: 0rem;
+}
+.product-info {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: 100%;
+}
+.product-info h4 {
+  text-align: left;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.product-info p {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.dicountinput {
+  width: 70%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-left: 0.5rem;
+}
+.apply-btn {
+  background: #000;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.summary {
+  width: 100%;
+  margin-top: 20px;
+}
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.summary p:last-child {
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-top: 2px solid #686868;
+}
+.radiostyling {
+  padding-bottom: 1rem;
+}
+.border4radio1 {
+  background: #cfcfcf83;
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.border4radio2 {
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  z-index: 9999;
+  border-bottom: 1px solid #ccc;
+}
+.logo {
+  display: inline-block;
+  transition: transform 0.6s ease;
+  position: fixed;
+  left: 12rem;
+}
+.Hero-heading {
+  position: fixed;
+  left: 16rem;
+  font-size: 2rem;
+}
+}
+@media (min-width:375px) and (max-width: 767px) {
+body {
+  margin: 0;
+  padding: 0;
+}
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*For Styling Of Checkout Page*/
+.containerCK {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 6rem;
+}
+.carticon4Ck {
+  display: none;
+}
+.Hero-heading {
+  position: relative;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 8px 10px 8px rgb(29, 198, 240);
+}
+.logo:hover {
+  transform: rotateX(360deg);
+}
+.checkout-form {
+  background: #fff;
+  padding: 10px 60px;
+  border-radius: 8px;
+  width: auto;
+}
+.checkout-form h2 {
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+.checkout-btn {
+  flex: 1;
+  background: rgb(0, 102, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+.texter,
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+select.active, select:hover {
+  cursor: pointer;
+}
+option:hover {
+  cursor: pointer;
+}
+input.error {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #135ab8;
+  border-radius: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.warning {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+.name-row input {
+  flex: 1;
+}
+label {
+  font-size: 16px;
+  font-family: sans-serif;
+  display: block;
+  margin: 5px 0;
+}
+.shipping-box {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+  font-family: sans-serif;
+  background: #cfcfcf83;
+}
+.payment-method {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #cfcfcf83;
+  font-family: sans-serif;
+}
+.order-btn {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.order-summary {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  margin-left: 3rem;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.product img {
+  width: 80px;
+  margin-right: 10px;
+}
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+.product-info p {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.product-info h4 {
+  text-align: left;
+  font-size: 18px;
+}
+.dicountinput {
+  width: 60%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-left: 0.5rem;
+}
+.apply-btn {
+  background: #000;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.summary {
+  width: 100%;
+  margin-top: 20px;
+}
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.summary p:last-child {
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-top: 2px solid #686868;
+}
+.radiostyling {
+  padding-bottom: 1rem;
+}
+.border4radio1 {
+  background: #cfcfcf83;
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.border4radio2 {
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem auto;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  max-height: 120px;
+  z-index: 9999;
+  border-bottom: 1px solid #ccc;
+}
+.Hero-heading {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.logo {
+  display: inline-block;
+  transition: transform 0.6s ease;
+  top: 1.5rem;
+  left: 1rem;
+  position: fixed;
+}
+.menu-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #3f3f3f;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.nav-menu {
+  padding-top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  top: 6.3rem;
+  left: 0;
+  right: 0;
+  background-color: #bbbbbb;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1111;
+}
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.nav-menu ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+ul li:last-child {
+  margin: 0;
+  border-bottom: none;
+}
+.nav-menu ul li a {
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.nav-menu ul hr {
+  width: 90%;
+  margin: auto;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+#cartBtn {
+  margin-top: 0;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+.nav-menu.active {
+  max-height: 330px; /* Adjust based on number of items */
+}
+.nav-link.active {
+  color: blue;
+  text-decoration: underline;
+  font-weight: 700;
+}
+}
+@media (min-width: 220px) and (max-width: 374px) {
+  body {
+  margin: 0;
+  padding: 0;
+}
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*For Styling Of Checkout Page*/
+.containerCK {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 6rem;
+    margin-left: 0;
+}
+.carticon4Ck {
+  display: none;
+}
+.Hero-heading {
+  position: relative;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 8px 10px 8px rgb(29, 198, 240);
+}
+.logo:hover {
+  transform: rotateX(360deg);
+}
+.checkout-form {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: auto;
+}
+.checkout-form h2 {
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+.checkout-btn {
+  flex: 1;
+  background: rgb(0, 102, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+.texter,
+input[type="email"],
+input[type="tel"],
+select {
+  width: 80%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+select.active, select:hover {
+  cursor: pointer;
+}
+option:hover {
+  cursor: pointer;
+}
+input.error {
+  width: 80%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #135ab8;
+  border-radius: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.warning {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+.name-row input {
+  flex: 1;
+}
+label {
+  font-size: 16px;
+  font-family: sans-serif;
+  display: block;
+  margin: 5px 0;
+}
+.shipping-box {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+  font-family: sans-serif;
+  background: #cfcfcf83;
+}
+.payment-method {
+  border: 1px solid #000;
+  padding: 15px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #cfcfcf83;
+  font-family: sans-serif;
+}
+.order-btn {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.order-summary {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  width: auto;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.product img {
+  width: 80px;
+  margin-right: 10px;
+}
+.product-info {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+.product-info p {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.product-info h4 {
+  font-size: 16px;
+}
+.dicountinput {
+  width: 60%;
+  padding: 15px 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-left: 0.5rem;
+}
+.apply-btn {
+  background: #000;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.summary {
+  width: 100%;
+  margin-top: 20px;
+}
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.summary p:last-child {
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-top: 2px solid #686868;
+}
+.radiostyling {
+  padding-bottom: 1rem;
+}
+.border4radio1 {
+  background: #cfcfcf83;
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.border4radio2 {
+  font-family: sans-serif;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  margin: 0 auto;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem auto;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  max-height: 120px;
+  z-index: 9999;
+  border-bottom: 1px solid #ccc;
+}
+.Hero-heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.logo {
+  display: inline-block;
+  transition: transform 0.6s ease;
+  width: 40px;
+  height: 40px;
+  top: 2rem;
+  left: 0.5rem;
+  position: fixed;
+}
+.menu-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #3f3f3f;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.nav-menu {
+  padding-top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  top: 6.3rem;
+  left: 0;
+  right: 0;
+  background-color: #bbbbbb;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1111;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-menu ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+.nav-menu ul li a {
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.nav-menu ul hr {
+  width: 90%;
+  margin: auto;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+#cartBtn {
+  margin-top: 0;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+.nav-menu.active {
+  max-height: 330px; /* Adjust based on number of items */
+}
+.nav-link.active {
+  color: blue;
+  text-decoration: underline;
+  font-weight: 700;
+}
+}
+    </style>
+</head>
+<body>
+  <!--Header Section Block-->
+  <header class="navbar">
+    <img src="Images/favicon.ico" width="auto" height="auto" class="logo">
+    <h1 class="Hero-heading dm-serif-text-regular"><a style="color: #000;" href="index.html">H & M Computers</a></h1>
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <nav class="nav-menu" id="navMenu">
+      <ul id="navLinks" class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="Products.html">Products</a></li>
+      <li><a class="nav-link" href="About-Us.html">About Us</a></li>
+      <li><a class="nav-link" href="Checkout.html">Checkout</a></li>
+      <li><a class="nav-link" href="Contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+   <!--For Checkout Page-->
+<div class="containerCK">
+  <form class="checkout-form" id="checkoutForm">
+    <h2 class="dm-serif-text-regular">Contact</h2>
+    <input type="email" name="email" placeholder="Email" required>
+    <label><input type="checkbox" checked> Signup for order updates, Exclusive offers, and News Email.</label>
+
+    <h2 class="dm-serif-text-regular">Delivery</h2>
+    <select name="country" required>
+      <option selected>Pakistan</option>
+    </select>
+    <div class="name-row">
+      <input class="texter" type="text" name="first_name" placeholder="First name" required>
+      <input class="texter" type="text" name="last_name" placeholder="Last name" required>
+    </div>
+    <input name="address" placeholder="Address" required class="error">
+    <small class="warning">Please provide complete address with nearest landmark for fastest delivery.</small>
+    <input class="texter" type="text" placeholder="Apartment, suite, etc. (optional)">
+    <div class="name-row">
+      <input class="texter" type="text" name="city" placeholder="City" required>
+      <input class="texter" type="text" placeholder="Postal code (optional)">
+    </div>
+    <input class="texter" type="tel" name="phone" placeholder="Phone" required>
+    <label><input type="checkbox"> Save this information for next time</label>
+    <label><input type="checkbox"> Text me with news and offers</label>
+
+    <h2 class="dm-serif-text-regular">Shipping method</h2>
+    <div class="shipping-box">Free Shipping <span>FREE</span></div>
+
+    <h2 class="dm-serif-text-regular">Payment</h2>
+    <div class="payment-method">Cash on Delivery (COD)</div>
+
+    <h2 class="dm-serif-text-regular">Billing address</h2>
+    <div class="radiostyling">
+    <label class="border4radio1"><input type="radio" name="billing" checked> Same as shipping address</label>
+    <label class="border4radio2"><input type="radio" name="billing"> Use a different billing address</label>
+    </div>
+    <button type="submit" class="order-btn">Complete order</button>
+  </form>
+
+  <div class="order-summary">
+    <div class="product">
+      <img src="https://via.placeholder.com/80" alt="Product">
+      <div class="product-info">
+        <h4 class="dm-serif-text-regular">Benz Icon 10000 Mah Power Bank</h4>
+        <p>Rs 3,799.00</p>
+      </div>
+    </div>
+    <input class="dicountinput" type="text" placeholder="Discount code">
+    <button class="apply-btn" disabled>Apply</button>
+    <div class="summary dm-serif-text-regular">
+      <p>Subtotal: <span>Rs 3,799.00</span></p>
+      <p>Shipping: <span>FREE</span></p>
+      <p>Total: <span>PKR Rs 3,799.00</span></p>
+    </div>
+  </div>
+</div>
+<!--Checkout Page Ends Here-->
+<!--For Displaying Message About the Order-->
+<div id="alert"></div>
+<script>
+  // Add active class to nav link based on current page URL
+const currentPage = window.location.pathname.split("/").pop();
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+  document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("checkout.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(res => res.text())
+    .then(data => {
+      if (data.trim() === "success") {
+        alert("Your order has been received successfully!");
+        form.reset();
+      } else {
+        alert("Error saving order. Try again.");
+      }
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      alert("Network error.");
+    });
+});
+const hamburger = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle("change");
+});
+</script>
+</body>
+</html>
