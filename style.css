@@ -514,7 +514,7 @@ header h1.Hero-heading {
   margin-top: 4rem;
   text-align: center;
   justify-content: center;
-  width: 320px;
+  width: auto;
   height: fit-content;
   max-width: 100%;
   overflow: hidden;
