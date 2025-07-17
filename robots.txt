@@ -11,4 +11,4 @@ Disallow: /tmp/
 Allow: /
 
 # Link to your sitemap
-Sitemap: http://mylaptopstore.onlinewebshop.net/sitemap.xml
+Sitemap: https://hamzaqid7.github.io/my-website/sitemap.xml
