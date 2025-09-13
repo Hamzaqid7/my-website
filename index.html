@@ -89,7 +89,7 @@
     color: #ffffff;
   }
   #content {
-    display: none;
+    visibility: hidden;
   }
   </style>
 </head>
@@ -630,7 +630,7 @@
         // Condition: when document is completely loaded
         if (document.readyState === "complete") {
           document.getElementById("loader").style.display = "none";
-          document.getElementById("content").style.display = "flex";
+          document.getElementById("content").style.visibility = "visible";
           // Stop the interval once done
           clearInterval(checkInterval);
         }
@@ -984,6 +984,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <script src="script.js" async></script>
 </body>
 </html>
+
 
 
 
