@@ -20,7 +20,7 @@
       z-index: 9999999;
       align-items: center;
       justify-content: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: poppins;
       font-weight: 600;
       letter-spacing: 1.5px;
       text-align: center;
@@ -37,6 +37,7 @@
     margin: 0;
     left: 0;
     top: 0;
+    z-index: 11111111;
     }
   #loader:after {
     content: '';
@@ -46,6 +47,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 11111111;
     background-repeat: no-repeat;
     background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100% ), 
         radial-gradient( circle 80px at 80px 80px, #ffffff 100%, transparent 0 ), 
@@ -98,6 +100,9 @@
   .notice p a:hover {
     color: #ffffff;
   }
+#content {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -107,6 +112,7 @@
     </div>
   <!-- For Mouse Cursor Trailing Effect -->
   <div class="cursor-trail"></div>
+<div id="content">
     <header class="navbar">
     <img src="favicon.ico" class="logo">
     <h1 class="Hero-heading"><a style="color: #fff;" href="index.html">H & M Computers</a></h1>
@@ -360,7 +366,7 @@ const alertBox = document.getElementById("alert");
     <p>&copy; 2025 H & M Computers. All rights reserved.</p>
   </div>
 </footer>
-
+</div>
  <script>
      // Run after page is loaded
     window.onload = function() {
@@ -369,7 +375,7 @@ const alertBox = document.getElementById("alert");
         // Condition: when document is completely loaded
         if (document.readyState === "complete") {
           document.getElementById("loader").style.display = "none";
-          
+          document.getElementById("content").style.display = "flex";
           // Stop the interval once done
           clearInterval(checkInterval);
         }
@@ -667,4 +673,5 @@ document.addEventListener("DOMContentLoaded", () => {
   <script src="script.js"></script>
 </body>
 </html>
+
 
