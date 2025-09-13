@@ -25,6 +25,7 @@
     margin: 0;
     left: 0;
     top: 0;
+    z-index: 11111111;
     }
   #loader:after {
     content: '';
@@ -34,6 +35,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 11111111;
     background-repeat: no-repeat;
     background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100% ), 
         radial-gradient( circle 80px at 80px 80px, #ffffff 100%, transparent 0 ), 
@@ -59,7 +61,7 @@
   }
   .notice {
     position: fixed;
-    z-index: 1111111;
+    z-index: 1111;
     right: 40px;
     bottom: 40px;
     width: 60%;
@@ -86,6 +88,9 @@
   .notice p a:hover {
     color: #ffffff;
   }
+  #content {
+    display: none;
+  }
   </style>
 </head>
 <body>
@@ -95,6 +100,7 @@
     </div>
 <!-- For Mouse Cursor Trailing Effect -->
   <div class="cursor-trail"></div>
+<div id="content">
   <header class="navbar">
     <img src="favicon.ico" class="logo" alt="logo design of H&M Computers">
     <h1 class="Hero-heading animateddiv slide-in-top"><a style="color: #fff;" href="index.html">H & M Computers</a></h1>
@@ -615,7 +621,7 @@
     <p>&copy; 2025 H & M Computers. All rights reserved.</p>
   </div>
 </footer>
-
+</div>
 <script>
   // Run after page is loaded
     window.onload = function() {
@@ -624,6 +630,7 @@
         // Condition: when document is completely loaded
         if (document.readyState === "complete") {
           document.getElementById("loader").style.display = "none";
+          document.getElementById("content").style.display = "flex";
           // Stop the interval once done
           clearInterval(checkInterval);
         }
@@ -977,6 +984,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <script src="script.js" async></script>
 </body>
 </html>
+
 
 
 
